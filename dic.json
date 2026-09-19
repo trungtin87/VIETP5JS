@@ -2586,7 +2586,7 @@
     },
     {
       "en": "print",
-      "vi": "in",
+      "vi": "inRaManHinh",
       "loai": "ham",
       "nhom": "nhap_xuat",
       "do_uu_tien": "trung_cap",
