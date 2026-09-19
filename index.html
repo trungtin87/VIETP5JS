@@ -74,17 +74,17 @@
   .dong-tep:hover .nut-xoa-tep { visibility:visible; }
   .nut-xoa-tep:hover { color:#ff6b6b; }
 
-  #o-soan-thao-vung { flex:1; min-width:0; }
+  #o-soan-thao-vung { flex:1; min-width:220px; }
   #o-soan-thao { width:100%; height:100%; }
 
   #o-hien-thi { width:42%; min-width:280px; display:flex; flex-direction:column; border-left:1px solid #111; }
-  #khung-canvas { flex:1; background:#fff; position:relative; }
+  #khung-canvas { flex:1; background:#fff; position:relative; min-height:0; }
   #khung-canvas iframe { width:100%; height:100%; border:none; display:block; }
 
   /* Console thu gon mac dinh (kieu p5.js editor): chi hien thanh tieu de,
-     bam vao moi xo ra. Dung chung cho ca desktop lan mobile. */
-  #vung-console { flex:0 0 auto; max-height:34px; overflow:hidden; background:#1e1e1e; border-top:1px solid #111; transition:max-height .18s ease; }
-  #vung-console.mo { max-height:45vh; display:flex; flex-direction:column; }
+     bam vao moi xo ra hoac keo thanh #keo-ngang de tuy chinh chieu cao. */
+  #vung-console { flex:0 0 34px; display:flex; flex-direction:column; overflow:hidden; background:#1e1e1e; border-top:1px solid #111; transition:flex-basis .15s ease; }
+  #vung-console.dang-keo { transition:none; }
   #tieu-de-console {
     padding:8px 12px; font-size:12px; text-transform:uppercase; letter-spacing:.05em;
     color:#9aa4b2; display:flex; justify-content:space-between; align-items:center;
@@ -94,7 +94,7 @@
   #bang-console {
     display:none; overflow-y:auto; font-family:Consolas, monospace; font-size:12.5px; padding:6px 10px;
   }
-  #vung-console.mo #bang-console { display:block; flex:1; }
+  #vung-console.mo #bang-console { display:block; flex:1; min-height:0; }
   .dong-console { padding:3px 4px; border-bottom:1px solid #262626; white-space:pre-wrap; word-break:break-word; }
   .dong-console.dong-log { color:#d7e0ea; }
   .dong-console.dong-warn { color:#ffd166; background:#2a2410; }
@@ -102,6 +102,14 @@
   .dong-console.dong-he-thong { color:#7bb3ff; }
 
   input[type=file] { display:none; }
+
+  /* ===== Thanh keo tuy chinh kich thuoc (chi desktop) ===== */
+  .thanh-keo { background:#111; flex-shrink:0; touch-action:none; }
+  .thanh-keo:hover, .thanh-keo.dang-keo { background: var(--mau-nhan); }
+  #keo-doc { width:6px; cursor:col-resize; }
+  #keo-ngang { height:6px; cursor:row-resize; }
+  body.dang-keo-doc, body.dang-keo-doc * { cursor:col-resize !important; user-select:none !important; }
+  body.dang-keo-ngang, body.dang-keo-ngang * { cursor:row-resize !important; user-select:none !important; }
 
   /* ===== Nut tron noi (FAB) — chi hien tren mobile ===== */
   #nut-fab {
@@ -143,6 +151,8 @@
     #o-hien-thi { border-left:none; width:100%; }
 
     #nut-fab { display:flex; }
+
+    .thanh-keo { display:none; }
   }
 </style>
 </head>
@@ -192,8 +202,11 @@
 
   <div id="o-soan-thao-vung"><div id="o-soan-thao"></div></div>
 
+  <div id="keo-doc" class="thanh-keo" title="Kéo để đổi tỉ lệ Code / Xem trước"></div>
+
   <div id="o-hien-thi">
     <div id="khung-canvas"></div>
+    <div id="keo-ngang" class="thanh-keo" title="Kéo để đổi chiều cao Console"></div>
     <div id="vung-console">
       <div id="tieu-de-console" onclick="toggleConsole()">
         <span>Console <span id="mui-ten-console">▸</span></span>
@@ -242,6 +255,13 @@ function khiVe() {
 
   function tepDangMo() { return cacTep.find(t => t.id === tepDangMoId); }
 
+  // Chieu cao Console khi mo rong (px) — nho lai qua localStorage neu co.
+  let chieuCaoConsoleMoRong = 200;
+  try {
+    const daLuu = localStorage.getItem('vietp5_cao_console');
+    if (daLuu) chieuCaoConsoleMoRong = parseInt(daLuu, 10);
+  } catch (loi) { /* localStorage co the bi chan (che do an danh...) - bo qua */ }
+
   // (Khong can ham thoat HTML rieng: bang-console dung textContent nen da
   // an toan truoc XSS tu chinh mau code cua nguoi dung.)
 
@@ -263,6 +283,10 @@ function khiVe() {
     trinhSoanThao.onDidChangeModelContent(function () {
       const t = tepDangMo();
       if (t) t.noiDung = trinhSoanThao.getValue();
+    });
+    trinhSoanThao.onDidPaste(function () {
+      // Doi 1 tick de Monaco cap nhat xong model truoc khi doc lai.
+      setTimeout(tuDongDichKhiDan, 0);
     });
     dangKyGoiYTuDong();
     veLaiDanhSachTep();
@@ -420,9 +444,84 @@ function khiVe() {
   }
   function toggleConsole() {
     const o = document.getElementById('vung-console');
-    o.classList.toggle('mo');
-    document.getElementById('mui-ten-console').textContent = o.classList.contains('mo') ? '▾' : '▸';
+    const dangMo = o.classList.toggle('mo');
+    document.getElementById('mui-ten-console').textContent = dangMo ? '▾' : '▸';
+    o.style.flexBasis = dangMo ? (chieuCaoConsoleMoRong + 'px') : '34px';
   }
+
+  // =========================================================
+  // 3b) KEO TUY CHINH KICH THUOC (CHI DESKTOP)
+  // =========================================================
+  function thietLapKeoDoc() {
+    const tay = document.getElementById('keo-doc');
+    const oTrai = document.getElementById('o-soan-thao-vung');
+
+    try {
+      const rongDaLuu = localStorage.getItem('vietp5_rong_editor');
+      if (rongDaLuu) oTrai.style.flex = '0 0 ' + rongDaLuu + 'px';
+    } catch (loi) { /* bo qua */ }
+
+    tay.addEventListener('pointerdown', function (su_kien) {
+      su_kien.preventDefault();
+      tay.setPointerCapture(su_kien.pointerId);
+      document.body.classList.add('dang-keo-doc');
+      tay.classList.add('dang-keo');
+
+      function diChuyen(su_kien2) {
+        const hcn = document.getElementById('vung-chinh').getBoundingClientRect();
+        let rongMoi = su_kien2.clientX - hcn.left;
+        rongMoi = Math.max(220, Math.min(rongMoi, hcn.width - 260));
+        oTrai.style.flex = '0 0 ' + rongMoi + 'px';
+        try { localStorage.setItem('vietp5_rong_editor', String(rongMoi)); } catch (loi) { /* bo qua */ }
+      }
+      function ketThuc() {
+        tay.releasePointerCapture(su_kien.pointerId);
+        document.body.classList.remove('dang-keo-doc');
+        tay.classList.remove('dang-keo');
+        tay.removeEventListener('pointermove', diChuyen);
+        tay.removeEventListener('pointerup', ketThuc);
+      }
+      tay.addEventListener('pointermove', diChuyen);
+      tay.addEventListener('pointerup', ketThuc);
+    });
+  }
+
+  function thietLapKeoNgang() {
+    const tay = document.getElementById('keo-ngang');
+    const oConsole = document.getElementById('vung-console');
+
+    tay.addEventListener('pointerdown', function (su_kien) {
+      su_kien.preventDefault();
+      tay.setPointerCapture(su_kien.pointerId);
+      document.body.classList.add('dang-keo-ngang');
+      tay.classList.add('dang-keo');
+      oConsole.classList.add('dang-keo');
+      const hcnHienThi = document.getElementById('o-hien-thi').getBoundingClientRect();
+
+      function diChuyen(su_kien2) {
+        let caoMoi = hcnHienThi.bottom - su_kien2.clientY;
+        caoMoi = Math.max(60, Math.min(caoMoi, hcnHienThi.height - 100));
+        oConsole.classList.add('mo');
+        document.getElementById('mui-ten-console').textContent = '▾';
+        oConsole.style.flexBasis = caoMoi + 'px';
+        chieuCaoConsoleMoRong = caoMoi;
+        try { localStorage.setItem('vietp5_cao_console', String(caoMoi)); } catch (loi) { /* bo qua */ }
+      }
+      function ketThuc() {
+        tay.releasePointerCapture(su_kien.pointerId);
+        document.body.classList.remove('dang-keo-ngang');
+        tay.classList.remove('dang-keo');
+        oConsole.classList.remove('dang-keo');
+        tay.removeEventListener('pointermove', diChuyen);
+        tay.removeEventListener('pointerup', ketThuc);
+      }
+      tay.addEventListener('pointermove', diChuyen);
+      tay.addEventListener('pointerup', ketThuc);
+    });
+  }
+
+  thietLapKeoDoc();
+  thietLapKeoNgang();
 
   // ===== Che do xem tren mobile: "code" hoac "xem" (preview + console) =====
   function chuyenCheDoXem(che_do) {
@@ -530,6 +629,17 @@ function khiVe() {
     return offsetCu + delta;
   }
 
+  // Ap ket qua da dich vao model + doi lai vi tri con tro cho khop.
+  function apDungKetQuaDich(tep, ketQua, offsetCu) {
+    const model = trinhSoanThao.getModel();
+    model.setValue(ketQua.ma_ket_qua);
+    tep.noiDung = ketQua.ma_ket_qua;
+    const offsetMoi = anhXaViTriMoi(offsetCu, ketQua.thay_the);
+    const viTriMoi = model.getPositionAt(offsetMoi);
+    trinhSoanThao.setPosition(viTriMoi);
+    trinhSoanThao.revealPositionInCenter(viTriMoi);
+  }
+
   function doiNgonNgu() {
     if (!trinhSoanThao) return;
     const tep = tepDangMo();
@@ -546,20 +656,48 @@ function khiVe() {
       return;
     }
 
-    model.setValue(ketQua.ma_ket_qua);
-    tep.noiDung = ketQua.ma_ket_qua;
+    apDungKetQuaDich(tep, ketQua, offsetCu);
     tep.ngonNgu = (tep.ngonNgu === 'vi') ? 'en' : 'vi';
-
-    const offsetMoi = anhXaViTriMoi(offsetCu, ketQua.thay_the);
-    const viTriMoi = model.getPositionAt(offsetMoi);
-    trinhSoanThao.setPosition(viTriMoi);
-    trinhSoanThao.revealPositionInCenter(viTriMoi);
     trinhSoanThao.focus();
 
     capNhatNhanNgonNgu();
     veLaiDanhSachTep();
     ghiConsole('Đã dịch ' + ketQua.so_tu_da_dich + ' từ khóa trong "' + tep.ten + '".', 'he-thong');
   }
+
+  // ===== Tu dong dich khi dan (paste) ma theo dung che do cua tep dang mo =====
+  // Neu tep dang o che do Tieng Viet ma dan ma p5.js tieng Anh (hoac nguoc lai)
+  // vao, tu dong chuan hoa toan bo noi dung ve dung ngon ngu cua tep - khong
+  // can bam nut "Doi ngon ngu" thu cong nua. Chi tac dong den nhung tu KHOP
+  // voi tu dien (dic.json) nen phan con lai cua ma khong bi dung vao.
+  function tuDongDichKhiDan() {
+    if (!trinhSoanThao) return;
+    const tep = tepDangMo();
+    if (!tep) return;
+
+    const model = trinhSoanThao.getModel();
+    const maHienTai = model.getValue();
+    const viTriCu = trinhSoanThao.getPosition();
+    const offsetCu = model.getOffsetAt(viTriCu);
+
+    // Dich theo huong CHUAN HOA VE che do hien tai cua tep:
+    // tep dang "vi" -> doan vua dan (thuong la p5.js tieng Anh) duoc dich sang Viet.
+    // tep dang "en" -> doan vua dan (neu la ten tieng Viet) duoc dich sang Anh.
+    const ketQua = (tep.ngonNgu === 'vi') ? VietP5.dichAnhSangViet(maHienTai) : VietP5.dichVietSangAnh(maHienTai);
+
+    // Neu ma dang lo do (vd dan giua chung mot bieu thuc chua xong) hoac
+    // khong co tu nao can dich -> im lang, khong lam gian doan nguoi dung.
+    if (!ketQua.thanh_cong || ketQua.so_tu_da_dich === 0) return;
+
+    apDungKetQuaDich(tep, ketQua, offsetCu);
+    veLaiDanhSachTep();
+    ghiConsole(
+      'Đã tự động dịch ' + ketQua.so_tu_da_dich + ' từ khóa vừa dán để khớp chế độ "' +
+      (tep.ngonNgu === 'vi' ? 'Tiếng Việt' : 'English') + '" của tệp "' + tep.ten + '".',
+      'he-thong'
+    );
+  }
+
 
   // =========================================================
   // 6) BIEN DICH TOAN BO DU AN (NHIEU TEP) SANG TIENG ANH
