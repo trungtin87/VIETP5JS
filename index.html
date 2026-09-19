@@ -34,3 +34,695 @@
   .noi-dung-menu {
     display:none; position:absolute; top:100%; left:0; background:#2d2d2d;
     border:1px solid #444; border-radius:6px; min-width:220px; padding:4px; margin-top:4px;
+    box-shadow:0 8px 20px rgba(0,0,0,.4);
+  }
+  .cach-menu.mo .noi-dung-menu { display:block; }
+  .noi-dung-menu button { display:block; width:100%; text-align:left; background:none; padding:8px 10px; }
+  .noi-dung-menu button:hover { background:#3f3f46; }
+  #trang-thai-tu-dien { margin-left:auto; font-size:12px; color:#9aa4b2; padding-right:6px; }
+
+  #vung-chinh { display:flex; height:calc(100% - 45px); }
+
+  #sidebar {
+    width:220px; background:#252526; border-right:1px solid #111;
+    display:flex; flex-direction:column; flex-shrink:0;
+  }
+  #sidebar.an { display:none; }
+  #tieu-de-sidebar {
+    padding:10px 12px; font-size:12px; text-transform:uppercase; letter-spacing:.05em;
+    color:#9aa4b2; display:flex; justify-content:space-between; align-items:center;
+  }
+  #tieu-de-sidebar button { padding:3px 8px; font-size:15px; line-height:1; }
+  #danh-sach-tep { flex:1; overflow-y:auto; }
+  .dong-tep {
+    display:flex; align-items:center; gap:6px; padding:7px 12px; cursor:pointer;
+    font-size:13px; border-left:3px solid transparent;
+  }
+  .dong-tep:hover { background:#2a2d2e; }
+  .dong-tep.dang-mo { background:#37373d; border-left-color: var(--mau-nhan); }
+  .dong-tep .ten-tep { flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .dong-tep .ten-tep input {
+    width:100%; background:#1e1e1e; color:#eee; border:1px solid var(--mau-nhan);
+    border-radius:3px; padding:1px 4px; font-size:13px;
+  }
+  .nhan-ngon-ngu-tep {
+    font-size:10px; padding:1px 5px; border-radius:3px; background:#3a3a3a; color:#aaa;
+  }
+  .nut-xoa-tep {
+    background:none; color:#888; padding:0 4px; font-size:15px; visibility:hidden;
+  }
+  .dong-tep:hover .nut-xoa-tep { visibility:visible; }
+  .nut-xoa-tep:hover { color:#ff6b6b; }
+
+  #o-soan-thao-vung { flex:1; min-width:0; }
+  #o-soan-thao { width:100%; height:100%; }
+
+  #o-hien-thi { width:42%; min-width:280px; display:flex; flex-direction:column; border-left:1px solid #111; }
+  #khung-canvas { flex:1; background:#fff; position:relative; }
+  #khung-canvas iframe { width:100%; height:100%; border:none; display:block; }
+
+  /* Console thu gon mac dinh (kieu p5.js editor): chi hien thanh tieu de,
+     bam vao moi xo ra. Dung chung cho ca desktop lan mobile. */
+  #vung-console { flex:0 0 auto; max-height:34px; overflow:hidden; background:#1e1e1e; border-top:1px solid #111; transition:max-height .18s ease; }
+  #vung-console.mo { max-height:45vh; display:flex; flex-direction:column; }
+  #tieu-de-console {
+    padding:8px 12px; font-size:12px; text-transform:uppercase; letter-spacing:.05em;
+    color:#9aa4b2; display:flex; justify-content:space-between; align-items:center;
+    border-bottom:1px solid #2a2a2a; cursor:pointer; flex-shrink:0;
+  }
+  #tieu-de-console button { font-size:11px; padding:3px 8px; }
+  #bang-console {
+    display:none; overflow-y:auto; font-family:Consolas, monospace; font-size:12.5px; padding:6px 10px;
+  }
+  #vung-console.mo #bang-console { display:block; flex:1; }
+  .dong-console { padding:3px 4px; border-bottom:1px solid #262626; white-space:pre-wrap; word-break:break-word; }
+  .dong-console.dong-log { color:#d7e0ea; }
+  .dong-console.dong-warn { color:#ffd166; background:#2a2410; }
+  .dong-console.dong-error { color:#ff6b6b; background:#2a1414; }
+  .dong-console.dong-he-thong { color:#7bb3ff; }
+
+  input[type=file] { display:none; }
+
+  /* ===== Nut tron noi (FAB) — chi hien tren mobile ===== */
+  #nut-fab {
+    display:none; position:fixed; right:18px; bottom:18px; width:56px; height:56px;
+    border-radius:50%; background:var(--mau-nhan); color:#fff; font-size:20px;
+    align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(0,0,0,.4);
+    z-index:40; border:none; cursor:pointer; padding:0;
+  }
+
+  /* ===== Tab Code / Xem truoc — chi hien tren mobile ===== */
+  #tab-mobile { display:none; }
+  #tab-mobile button.dang-chon { background:var(--mau-nhan); color:#fff; }
+
+  /* ===== Lop nen mo khi keo sidebar tren mobile ===== */
+  #nen-mo-sidebar { display:none; }
+
+  @media (max-width: 860px) {
+    #tab-mobile { display:flex; gap:4px; order:10; width:100%; margin-top:4px; }
+    #tab-mobile button { flex:1; background:#232323; }
+
+    #thanh-menu .chi-desktop { display:none; }
+
+    #vung-chinh { position:relative; overflow:hidden; }
+
+    #sidebar {
+      position:fixed; top:0; left:0; bottom:0; width:78%; max-width:280px;
+      transform:translateX(-100%); transition:transform .2s ease; z-index:35;
+    }
+    #sidebar.mo { transform:translateX(0); }
+
+    #nen-mo-sidebar.mo {
+      display:block; position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:30;
+    }
+
+    #o-soan-thao-vung, #o-hien-thi { display:none; width:100%; }
+    body.xem-code #o-soan-thao-vung { display:block; }
+    body.xem-truoc #o-hien-thi { display:flex; }
+
+    #o-hien-thi { border-left:none; width:100%; }
+
+    #nut-fab { display:flex; }
+  }
+</style>
+</head>
+<body class="xem-code">
+
+<div id="thanh-menu">
+  <div class="cach-menu" id="menu-tep">
+    <button onclick="dongMoMenu('menu-tep')">☰ Tệp</button>
+    <div class="noi-dung-menu">
+      <button onclick="taoTepMoi(); dongTatCaMenu();">➕ Tệp mới</button>
+      <button onclick="document.getElementById('nhap-tep-an').click(); dongTatCaMenu();">⬆ Tải tệp/dự án lên (.js, .zip)</button>
+      <button onclick="taiXuongDuAn(); dongTatCaMenu();">⬇ Tải dự án xuống (.zip)</button>
+    </div>
+  </div>
+  <input type="file" id="nhap-tep-an" multiple accept=".js,.zip">
+
+  <input id="ten-du-an" value="dự_án_không_tên" spellcheck="false">
+
+  <button onclick="toggleSidebar()" title="Ẩn/hiện danh sách tệp">🗂</button>
+
+  <span class="chi-desktop" style="width:1px;background:#444;align-self:stretch;margin:0 4px;"></span>
+
+  <button class="chinh chi-desktop" onclick="chay()">▶ Chạy</button>
+  <button class="chi-desktop" onclick="dung()">■ Dừng</button>
+  <button class="chi-desktop" onclick="lamMoiCanvas()">↺ Reset</button>
+  <button onclick="doiNgonNgu()">⇄ <span id="nhan-ngon-ngu">Tiếng Việt</span></button>
+
+  <span id="trang-thai-tu-dien" class="chi-desktop">Đang tải từ điển...</span>
+
+  <div id="tab-mobile">
+    <button id="nut-tab-code" class="dang-chon" onclick="chuyenCheDoXem('code')">💻 Code</button>
+    <button id="nut-tab-xem" onclick="chuyenCheDoXem('xem')">▶ Xem trước</button>
+  </div>
+</div>
+
+<button id="nut-fab" onclick="bamFab()" title="Chạy / Dừng">▶</button>
+<div id="nen-mo-sidebar" onclick="dongSidebarMobile()"></div>
+
+<div id="vung-chinh">
+  <div id="sidebar">
+    <div id="tieu-de-sidebar">
+      <span>Tệp trong dự án</span>
+      <button onclick="taoTepMoi()" title="Thêm tệp mới">+</button>
+    </div>
+    <div id="danh-sach-tep"></div>
+  </div>
+
+  <div id="o-soan-thao-vung"><div id="o-soan-thao"></div></div>
+
+  <div id="o-hien-thi">
+    <div id="khung-canvas"></div>
+    <div id="vung-console">
+      <div id="tieu-de-console" onclick="toggleConsole()">
+        <span>Console <span id="mui-ten-console">▸</span></span>
+        <button onclick="event.stopPropagation(); xoaConsole();">Xóa</button>
+      </div>
+      <div id="bang-console"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // =========================================================
+  // TRANG THAI DU AN (NHIEU TEP)
+  // =========================================================
+  let dem_id_tep = 0;
+  function taoIdTep() { return 'tep_' + (++dem_id_tep); }
+
+  const MA_MAU_VI = `function khiBatDau() {
+  taoKhung(400, 400);
+}
+
+let tocDoX = 2;
+let tocDoY = 3;
+let x, y;
+
+function khiVe() {
+  toMauNen(255);
+
+  if (x === undefined) { x = doRong / 2; y = doCao / 2; }
+
+  x = x + tocDoX;
+  y = y + tocDoY;
+  if (x > doRong || x < 0) { tocDoX = tocDoX * -1; }
+  if (y > doCao || y < 0) { tocDoY = tocDoY * -1; }
+
+  khongNet();
+  mauTo(0, 150, 255);
+  veHinhTron(x, y, 50);
+
+  in("Toa do: " + lamTron(x) + ", " + lamTron(y));
+}
+`;
+
+  let cacTep = [{ id: taoIdTep(), ten: 'sketch.js', noiDung: MA_MAU_VI, ngonNgu: 'vi' }];
+  let tepDangMoId = cacTep[0].id;
+
+  function tepDangMo() { return cacTep.find(t => t.id === tepDangMoId); }
+
+  // (Khong can ham thoat HTML rieng: bang-console dung textContent nen da
+  // an toan truoc XSS tu chinh mau code cua nguoi dung.)
+
+  // =========================================================
+  // 1) KHOI TAO MONACO EDITOR
+  // =========================================================
+  let trinhSoanThao = null;
+
+  require.config({ paths: { vs: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.47.0/min/vs' } });
+  require(['vs/editor/editor.main'], function () {
+    trinhSoanThao = monaco.editor.create(document.getElementById('o-soan-thao'), {
+      value: tepDangMo().noiDung,
+      language: 'javascript',
+      theme: 'vs-dark',
+      fontSize: 14,
+      minimap: { enabled: false },
+      automaticLayout: true
+    });
+    trinhSoanThao.onDidChangeModelContent(function () {
+      const t = tepDangMo();
+      if (t) t.noiDung = trinhSoanThao.getValue();
+    });
+    dangKyGoiYTuDong();
+    veLaiDanhSachTep();
+    capNhatNhanNgonNgu();
+  });
+
+  // =========================================================
+  // 2) TAI TU DIEN + AUTOCOMPLETE
+  // =========================================================
+  let duLieuTuDienDayDu = null;
+
+  VietP5.taiTuDien('./dic.json').then(function (tk) {
+    document.getElementById('trang-thai-tu-dien').textContent =
+      'Từ điển: ' + tk.so_muc_kha_dung + ' mục (p5.js ' + tk.phien_ban_p5js + ')';
+    return fetch('./dic.json').then(r => r.json());
+  }).then(function (json) {
+    duLieuTuDienDayDu = json;
+    dangKyGoiYTuDong();
+  }).catch(function (loi) {
+    document.getElementById('trang-thai-tu-dien').textContent = 'Lỗi tải dic.json — cần chạy qua local server.';
+    ghiConsole('Không tải được dic.json: ' + loi.message + ' — hãy chạy "python3 -m http.server" thay vì mở file trực tiếp.', 'error');
+  });
+
+  let daDangKyGoiY = false;
+  function dangKyGoiYTuDong() {
+    if (daDangKyGoiY || typeof monaco === 'undefined' || !duLieuTuDienDayDu) return;
+    daDangKyGoiY = true;
+    monaco.languages.registerCompletionItemProvider('javascript', {
+      provideCompletionItems: function () {
+        const goiY = duLieuTuDienDayDu.tu_dien.filter(m => m.vi).map(function (muc) {
+          const laHam = (muc.loai === 'ham' || muc.loai === 'su_kien');
+          return {
+            label: muc.vi,
+            kind: laHam ? monaco.languages.CompletionItemKind.Function : monaco.languages.CompletionItemKind.Variable,
+            detail: '↔ ' + muc.en + '  ·  ' + muc.nhom,
+            documentation: 'Nhóm: ' + muc.nhom + ' · Mức: ' + muc.do_uu_tien,
+            insertText: laHam ? (muc.vi + '(${1})') : muc.vi,
+            insertTextRules: laHam ? monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet : undefined
+          };
+        });
+        return { suggestions: goiY };
+      }
+    });
+  }
+
+  // =========================================================
+  // 3) QUAN LY TEP (SIDEBAR)
+  // =========================================================
+  function veLaiDanhSachTep() {
+    const o = document.getElementById('danh-sach-tep');
+    o.innerHTML = '';
+    cacTep.forEach(function (tep) {
+      const dong = document.createElement('div');
+      dong.className = 'dong-tep' + (tep.id === tepDangMoId ? ' dang-mo' : '');
+
+      const oTen = document.createElement('span');
+      oTen.className = 'ten-tep';
+      oTen.textContent = tep.ten;
+      oTen.onclick = function () { moTep(tep.id); };
+      oTen.ondblclick = function (su_kien) { batDauDoiTenTep(tep, oTen); su_kien.stopPropagation(); };
+
+      const oNhan = document.createElement('span');
+      oNhan.className = 'nhan-ngon-ngu-tep';
+      oNhan.textContent = tep.ngonNgu.toUpperCase();
+
+      const oXoa = document.createElement('button');
+      oXoa.className = 'nut-xoa-tep';
+      oXoa.textContent = '×';
+      oXoa.title = 'Xóa tệp';
+      oXoa.onclick = function (su_kien) { su_kien.stopPropagation(); xoaTep(tep.id); };
+
+      dong.appendChild(oTen);
+      dong.appendChild(oNhan);
+      dong.appendChild(oXoa);
+      o.appendChild(dong);
+    });
+  }
+
+  function batDauDoiTenTep(tep, oTen) {
+    const oInput = document.createElement('input');
+    oInput.value = tep.ten;
+    oTen.replaceWith(oInput);
+    oInput.focus();
+    oInput.select();
+    function xacNhan() {
+      const tenMoi = oInput.value.trim();
+      if (tenMoi && !cacTep.some(t => t.id !== tep.id && t.ten === tenMoi)) {
+        tep.ten = tenMoi;
+      }
+      veLaiDanhSachTep();
+    }
+    oInput.addEventListener('blur', xacNhan);
+    oInput.addEventListener('keydown', function (su_kien) {
+      if (su_kien.key === 'Enter') oInput.blur();
+      if (su_kien.key === 'Escape') veLaiDanhSachTep();
+    });
+  }
+
+  function moTep(id) {
+    if (id === tepDangMoId) return;
+    const tepCu = tepDangMo();
+    if (tepCu && trinhSoanThao) tepCu.noiDung = trinhSoanThao.getValue();
+    tepDangMoId = id;
+    if (trinhSoanThao) trinhSoanThao.setValue(tepDangMo().noiDung);
+    veLaiDanhSachTep();
+    capNhatNhanNgonNgu();
+    dongSidebarMobile();
+  }
+
+  function taoTepMoi() {
+    const tenGoiY = 'tep_moi_' + (cacTep.length + 1) + '.js';
+    const ten = prompt('Tên tệp mới (nên có đuôi .js):', tenGoiY);
+    if (!ten) return;
+    const tenChuan = /\.js$/i.test(ten) ? ten : ten + '.js';
+    if (cacTep.some(t => t.ten === tenChuan)) { alert('Đã có tệp tên này rồi.'); return; }
+    const tep = { id: taoIdTep(), ten: tenChuan, noiDung: '// ' + tenChuan + '\n', ngonNgu: 'vi' };
+    cacTep.push(tep);
+    moTep(tep.id);
+  }
+
+  function xoaTep(id) {
+    if (cacTep.length <= 1) { alert('Dự án cần ít nhất 1 tệp.'); return; }
+    const tep = cacTep.find(t => t.id === id);
+    if (!confirm('Xóa tệp "' + tep.ten + '"? Không thể hoàn tác.')) return;
+    cacTep = cacTep.filter(t => t.id !== id);
+    if (tepDangMoId === id) {
+      tepDangMoId = null;
+      moTep(cacTep[0].id);
+    } else {
+      veLaiDanhSachTep();
+    }
+  }
+
+  function themTepTuNoiDung(tenGoiY, noiDung, ngonNguGoiY) {
+    let ten = tenGoiY, soDem = 2;
+    while (cacTep.some(t => t.ten === ten)) { ten = tenGoiY.replace(/\.js$/i, '') + '_' + soDem + '.js'; soDem++; }
+    const tep = { id: taoIdTep(), ten: ten, noiDung: noiDung, ngonNgu: ngonNguGoiY || 'en' };
+    cacTep.push(tep);
+    return tep;
+  }
+
+  function toggleSidebar() {
+    const laMobile = window.matchMedia('(max-width: 860px)').matches;
+    const sb = document.getElementById('sidebar');
+    if (laMobile) {
+      sb.classList.toggle('mo');
+      document.getElementById('nen-mo-sidebar').classList.toggle('mo');
+    } else {
+      sb.classList.toggle('an');
+    }
+  }
+  function dongSidebarMobile() {
+    document.getElementById('sidebar').classList.remove('mo');
+    document.getElementById('nen-mo-sidebar').classList.remove('mo');
+  }
+  function toggleConsole() {
+    const o = document.getElementById('vung-console');
+    o.classList.toggle('mo');
+    document.getElementById('mui-ten-console').textContent = o.classList.contains('mo') ? '▾' : '▸';
+  }
+
+  // ===== Che do xem tren mobile: "code" hoac "xem" (preview + console) =====
+  function chuyenCheDoXem(che_do) {
+    document.body.classList.toggle('xem-code', che_do === 'code');
+    document.body.classList.toggle('xem-truoc', che_do === 'xem');
+    document.getElementById('nut-tab-code').classList.toggle('dang-chon', che_do === 'code');
+    document.getElementById('nut-tab-xem').classList.toggle('dang-chon', che_do === 'xem');
+    if (che_do === 'code') dongSidebarMobile();
+  }
+
+  // ===== Nut tron noi (FAB) tren mobile: gop chuc nang Chay/Dung =====
+  let dangChayFab = false;
+  function datTrangThaiChay(dangChay) {
+    dangChayFab = dangChay;
+    document.getElementById('nut-fab').textContent = dangChay ? '■' : '▶';
+  }
+  function bamFab() {
+    if (dangChayFab) { dung(); } else { chay(); }
+  }
+
+  function dongMoMenu(idMenu) {
+    const el = document.getElementById(idMenu);
+    const dangMo = el.classList.contains('mo');
+    dongTatCaMenu();
+    if (!dangMo) el.classList.add('mo');
+  }
+  function dongTatCaMenu() {
+    document.querySelectorAll('.cach-menu.mo').forEach(function (el) { el.classList.remove('mo'); });
+  }
+  document.addEventListener('click', function (su_kien) {
+    if (!su_kien.target.closest('.cach-menu')) dongTatCaMenu();
+  });
+
+  // =========================================================
+  // 4) TAI LEN / TAI XUONG DU AN
+  // =========================================================
+  document.getElementById('nhap-tep-an').addEventListener('change', async function (su_kien) {
+    const danhSach = Array.from(su_kien.target.files);
+    let tepCuoiCung = null;
+    for (const f of danhSach) {
+      if (/\.zip$/i.test(f.name)) {
+        const goi = await JSZip.loadAsync(f);
+        for (const duongDan in goi.files) {
+          const muc = goi.files[duongDan];
+          if (muc.dir || !/\.js$/i.test(duongDan)) continue;
+          const noiDung = await muc.async('string');
+          tepCuoiCung = themTepTuNoiDung(duongDan.split('/').pop(), noiDung, 'en');
+        }
+      } else if (/\.js$/i.test(f.name)) {
+        const noiDung = await f.text();
+        tepCuoiCung = themTepTuNoiDung(f.name, noiDung, 'en');
+      } else {
+        ghiConsole('Bỏ qua "' + f.name + '" — chỉ hỗ trợ .js hoặc .zip.', 'warn');
+      }
+    }
+    veLaiDanhSachTep();
+    if (tepCuoiCung) moTep(tepCuoiCung.id);
+    ghiConsole('Đã tải lên ' + danhSach.length + ' mục.', 'he-thong');
+    su_kien.target.value = '';
+  });
+
+  function taiXuongDuAn() {
+    const tepCu = tepDangMo();
+    if (tepCu && trinhSoanThao) tepCu.noiDung = trinhSoanThao.getValue();
+
+    const goi = new JSZip();
+    for (const tep of cacTep) goi.file(tep.ten, tep.noiDung);
+
+    const bienDich = bienDichTatCaTep();
+    if (bienDich.thanh_cong) {
+      goi.file('chay_thu.html', taoHtmlSandbox(bienDich.maGop, false));
+    } else {
+      ghiConsole('Lưu ý: chưa tạo được chay_thu.html do lỗi cú pháp ở tệp "' + bienDich.tep + '".', 'warn');
+    }
+
+    goi.generateAsync({ type: 'blob' }).then(function (blob) {
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = (document.getElementById('ten-du-an').value || 'du_an_vietp5').trim() + '.zip';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(a.href);
+      ghiConsole('Đã tạo file .zip để tải xuống.', 'he-thong');
+    });
+  }
+
+  // =========================================================
+  // 5) DOI NGON NGU CUA TEP DANG MO — GIU NGUYEN VI TRI CON TRO
+  // =========================================================
+  function capNhatNhanNgonNgu() {
+    const t = tepDangMo();
+    document.getElementById('nhan-ngon-ngu').textContent = (t && t.ngonNgu === 'en') ? 'English' : 'Tiếng Việt';
+  }
+
+  function anhXaViTriMoi(offsetCu, dsThayThe) {
+    let delta = 0;
+    for (const tt of dsThayThe) {
+      const doDaiCu = tt.ketThuc - tt.batDau;
+      const doDaiMoi = tt.tenMoi.length;
+      if (tt.ketThuc <= offsetCu) { delta += (doDaiMoi - doDaiCu); }
+      else if (tt.batDau <= offsetCu && offsetCu < tt.ketThuc) { return tt.batDau + delta + doDaiMoi; }
+      else { break; }
+    }
+    return offsetCu + delta;
+  }
+
+  function doiNgonNgu() {
+    if (!trinhSoanThao) return;
+    const tep = tepDangMo();
+    const model = trinhSoanThao.getModel();
+    const maHienTai = model.getValue();
+    const viTriCu = trinhSoanThao.getPosition();
+    const offsetCu = model.getOffsetAt(viTriCu);
+
+    const ketQua = (tep.ngonNgu === 'vi') ? VietP5.dichVietSangAnh(maHienTai) : VietP5.dichAnhSangViet(maHienTai);
+
+    if (!ketQua.thanh_cong) {
+      ghiConsole(ketQua.thong_bao, 'error');
+      if (ketQua.dong) { trinhSoanThao.revealLineInCenter(ketQua.dong); trinhSoanThao.setPosition({ lineNumber: ketQua.dong, column: ketQua.cot || 1 }); trinhSoanThao.focus(); }
+      return;
+    }
+
+    model.setValue(ketQua.ma_ket_qua);
+    tep.noiDung = ketQua.ma_ket_qua;
+    tep.ngonNgu = (tep.ngonNgu === 'vi') ? 'en' : 'vi';
+
+    const offsetMoi = anhXaViTriMoi(offsetCu, ketQua.thay_the);
+    const viTriMoi = model.getPositionAt(offsetMoi);
+    trinhSoanThao.setPosition(viTriMoi);
+    trinhSoanThao.revealPositionInCenter(viTriMoi);
+    trinhSoanThao.focus();
+
+    capNhatNhanNgonNgu();
+    veLaiDanhSachTep();
+    ghiConsole('Đã dịch ' + ketQua.so_tu_da_dich + ' từ khóa trong "' + tep.ten + '".', 'he-thong');
+  }
+
+  // =========================================================
+  // 6) BIEN DICH TOAN BO DU AN (NHIEU TEP) SANG TIENG ANH
+  // =========================================================
+  function bienDichTatCaTep() {
+    const tepCu = tepDangMo();
+    if (tepCu && trinhSoanThao) tepCu.noiDung = trinhSoanThao.getValue();
+
+    const cacDoan = [];
+    for (const tep of cacTep) {
+      const ketQua = (tep.ngonNgu === 'vi')
+        ? VietP5.dichVietSangAnh(tep.noiDung)
+        : VietP5.dichAnhSangViet(tep.noiDung);
+      if (!ketQua.thanh_cong) {
+        return { thanh_cong: false, tep: tep.ten, thong_bao: ketQua.thong_bao, dong: ketQua.dong };
+      }
+      const maCuoi = (tep.ngonNgu === 'vi') ? ketQua.ma_ket_qua : tep.noiDung;
+      cacDoan.push('// ==== ' + tep.ten + ' ====\n' + maCuoi);
+    }
+    return { thanh_cong: true, maGop: cacDoan.join('\n\n') };
+  }
+
+  // =========================================================
+  // 7) THUC THI TRONG IFRAME SANDBOX + CONSOLE + BAO VE VONG LAP
+  // =========================================================
+  const MAU_VONG_LAP_NGUY_HIEM = [/for\s*\(\s*;\s*;\s*\)/, /while\s*\(\s*true\s*\)/, /while\s*\(\s*1\s*\)/];
+  const THOI_GIAN_CHO_TOI_DA_MS = 4000;
+  let boDinhThoiCanhBaoTreo = null;
+
+  function chay() {
+    const ketQua = bienDichTatCaTep();
+    if (!ketQua.thanh_cong) {
+      ghiConsole('Lỗi trong tệp "' + ketQua.tep + '": ' + ketQua.thong_bao, 'error');
+      return;
+    }
+    const coNguyCo = MAU_VONG_LAP_NGUY_HIEM.some(m => m.test(ketQua.maGop));
+    if (coNguyCo) {
+      const dongY = confirm('Phát hiện có thể tồn tại vòng lặp vô hạn (for(;;) hoặc while(true)).\nVẫn muốn chạy?');
+      if (!dongY) { ghiConsole('Đã hủy chạy.', 'warn'); return; }
+    }
+    boChay(ketQua.maGop);
+  }
+
+  function taoHtmlSandbox(maTiengAnh, coCauNoiVoiTrangCha) {
+    const scriptCauNoi = !coCauNoiVoiTrangCha ? '' : `
+<script>
+window.onerror = function (thongBao, tep, dong) {
+  parent.postMessage({ loai: 'vietp5_loi', thongBao: thongBao, dong: dong }, '*');
+  return true;
+};
+(function () {
+  var gocLog = console.log, gocWarn = console.warn, gocError = console.error;
+  function gui(muc, doiSo) {
+    try { parent.postMessage({ loai: 'vietp5_console', muc: muc, noiDung: Array.from(doiSo).map(String).join(' ') }, '*'); } catch (e) {}
+  }
+  console.log = function () { gocLog.apply(console, arguments); gui('log', arguments); };
+  console.warn = function () { gocWarn.apply(console, arguments); gui('warn', arguments); };
+  console.error = function () { gocError.apply(console, arguments); gui('error', arguments); };
+})();
+<\/script>`;
+
+    const scriptNhipTim = !coCauNoiVoiTrangCha ? '' : `
+<script>
+(function () {
+  var goc = window.setup;
+  if (typeof goc === 'function') {
+    window.setup = function () {
+      var kq = goc.apply(this, arguments);
+      parent.postMessage({ loai: 'vietp5_sanSang' }, '*');
+      return kq;
+    };
+  } else {
+    parent.postMessage({ loai: 'vietp5_sanSang' }, '*');
+  }
+})();
+<\/script>`;
+
+    return `<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"><\/script>
+<style>html,body{margin:0;padding:0;overflow:hidden;background:#fff;}</style>
+</head><body>
+${scriptCauNoi}
+<script>
+${maTiengAnh}
+<\/script>
+${scriptNhipTim}
+</body></html>`;
+  }
+
+  function boChay(maTiengAnh) {
+    huyBoDinhThoiTreo();
+    datTrangThaiChay(true);
+    chuyenCheDoXem('xem');
+
+    const khungCanvas = document.getElementById('khung-canvas');
+    const iframeCu = khungCanvas.querySelector('iframe');
+    if (iframeCu) iframeCu.remove();
+
+    const iframe = document.createElement('iframe');
+    iframe.setAttribute('sandbox', 'allow-scripts');
+    iframe.srcdoc = taoHtmlSandbox(maTiengAnh, true);
+    khungCanvas.appendChild(iframe);
+
+    ghiConsole('Đang chạy...', 'he-thong');
+
+    boDinhThoiCanhBaoTreo = setTimeout(function () {
+      ghiConsole('⚠️ Không phản hồi sau ' + (THOI_GIAN_CHO_TOI_DA_MS / 1000) + 's — nghi ngờ vòng lặp vô hạn. Đang làm mới khung xem.', 'warn');
+      lamMoiCanvas();
+    }, THOI_GIAN_CHO_TOI_DA_MS);
+  }
+
+  window.addEventListener('message', function (su_kien) {
+    if (!su_kien.data) return;
+    if (su_kien.data.loai === 'vietp5_sanSang') {
+      huyBoDinhThoiTreo();
+      ghiConsole('Sketch đã khởi động — không phát hiện treo.', 'he-thong');
+    } else if (su_kien.data.loai === 'vietp5_loi') {
+      huyBoDinhThoiTreo();
+      ghiConsole('Lỗi khi thực thi (dòng ' + su_kien.data.dong + '): ' + su_kien.data.thongBao, 'error');
+    } else if (su_kien.data.loai === 'vietp5_console') {
+      ghiConsole(su_kien.data.noiDung, su_kien.data.muc);
+    }
+  });
+
+  function huyBoDinhThoiTreo() {
+    if (boDinhThoiCanhBaoTreo) { clearTimeout(boDinhThoiCanhBaoTreo); boDinhThoiCanhBaoTreo = null; }
+  }
+
+  function dung() {
+    huyBoDinhThoiTreo();
+    datTrangThaiChay(false);
+    const khungCanvas = document.getElementById('khung-canvas');
+    const iframeCu = khungCanvas.querySelector('iframe');
+    if (iframeCu) iframeCu.remove();
+    const iframeMoi = document.createElement('iframe');
+    iframeMoi.setAttribute('sandbox', 'allow-scripts');
+    khungCanvas.appendChild(iframeMoi);
+    ghiConsole('Đã dừng.', 'he-thong');
+  }
+
+  function lamMoiCanvas() {
+    dung();
+  }
+
+  // =========================================================
+  // 8) BANG CONSOLE
+  // =========================================================
+  let nhatKyConsole = [];
+  function ghiConsole(noiDung, muc) {
+    nhatKyConsole.push({ noiDung: noiDung, muc: muc || 'log' });
+    const o = document.getElementById('bang-console');
+    const dong = document.createElement('div');
+    dong.className = 'dong-console dong-' + (muc || 'log');
+    dong.textContent = noiDung;
+    o.appendChild(dong);
+    o.scrollTop = o.scrollHeight;
+  }
+  function xoaConsole() {
+    nhatKyConsole = [];
+    document.getElementById('bang-console').innerHTML = '';
+  }
+</script>
+
+</body>
+</html>
