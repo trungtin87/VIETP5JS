@@ -1,0 +1,4572 @@
+{
+  "phien_ban_p5js": "2.3.3",
+  "ghi_chu": "Ban quy hoach de duyet truoc khi trien khai AST transpiler. Truong 'vi': null nghia la de xuat GIU NGUYEN tieng Anh.",
+  "thong_ke": {
+    "tong_so_muc": 565,
+    "so_ham_va_su_kien": 423,
+    "so_hang_so": 142,
+    "so_muc_noi_bo_loai_bo": 38
+  },
+  "tu_dien": [
+    {
+      "en": "setup",
+      "vi": "khiBatDau",
+      "loai": "su_kien",
+      "nhom": "vong_doi_su_kien",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "draw",
+      "vi": "khiVe",
+      "loai": "su_kien",
+      "nhom": "vong_doi_su_kien",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "mousePressed",
+      "vi": "khiNhanChuot",
+      "loai": "su_kien",
+      "nhom": "vong_doi_su_kien",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "mouseReleased",
+      "vi": "khiThaChuot",
+      "loai": "su_kien",
+      "nhom": "vong_doi_su_kien",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "mouseClicked",
+      "vi": "khiBamChuot",
+      "loai": "su_kien",
+      "nhom": "vong_doi_su_kien",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "mouseDragged",
+      "vi": "khiKeoChuot",
+      "loai": "su_kien",
+      "nhom": "vong_doi_su_kien",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "mouseMoved",
+      "vi": "khiDiChuyenChuot",
+      "loai": "su_kien",
+      "nhom": "vong_doi_su_kien",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "mouseWheel",
+      "vi": "khiCuonChuot",
+      "loai": "su_kien",
+      "nhom": "vong_doi_su_kien",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "doubleClicked",
+      "vi": "khiBamDupChuot",
+      "loai": "su_kien",
+      "nhom": "vong_doi_su_kien",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "keyPressed",
+      "vi": "khiNhanPhim",
+      "loai": "su_kien",
+      "nhom": "vong_doi_su_kien",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "keyReleased",
+      "vi": "khiThaPhim",
+      "loai": "su_kien",
+      "nhom": "vong_doi_su_kien",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "keyTyped",
+      "vi": "khiGoPhim",
+      "loai": "su_kien",
+      "nhom": "vong_doi_su_kien",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "windowResized",
+      "vi": "khiThayDoiCuaSo",
+      "loai": "su_kien",
+      "nhom": "vong_doi_su_kien",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "deviceMoved",
+      "vi": "khiThietBiDiChuyen",
+      "loai": "su_kien",
+      "nhom": "vong_doi_su_kien",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "deviceShaken",
+      "vi": "khiThietBiLac",
+      "loai": "su_kien",
+      "nhom": "vong_doi_su_kien",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "deviceTurned",
+      "vi": "khiThietBiXoay",
+      "loai": "su_kien",
+      "nhom": "vong_doi_su_kien",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createCanvas",
+      "vi": "taoKhung",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "resizeCanvas",
+      "vi": "doiKichThuocKhung",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "noCanvas",
+      "vi": "khongKhung",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "background",
+      "vi": "toMauNen",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "clear",
+      "vi": "xoaManHinh",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "redraw",
+      "vi": "veLai",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "loop",
+      "vi": "lap",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "noLoop",
+      "vi": "dungLap",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "isLooping",
+      "vi": "dangLap",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "push",
+      "vi": "luuTrangThai",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "pop",
+      "vi": "phucHoiTrangThai",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "frameRate",
+      "vi": "tocDoKhungHinh",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createGraphics",
+      "vi": "taoLopVe",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "getTargetFrameRate",
+      "vi": "layTocDoKhungHinhMucTieu",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "displayDensity",
+      "vi": "matDoManHinh",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "pixelDensity",
+      "vi": "matDoDiemAnh",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "fullscreen",
+      "vi": "toanManHinh",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "cursor",
+      "vi": "conTro",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "noCursor",
+      "vi": "anConTro",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "smooth",
+      "vi": "lamMuot",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "noSmooth",
+      "vi": "khongLamMuot",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "setAttributes",
+      "vi": "thietLapThuocTinh",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "describe",
+      "vi": "moTa",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "describeElement",
+      "vi": "moTaThanhPhan",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "gridOutput",
+      "vi": "xuatDangLuoi",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "textOutput",
+      "vi": "xuatDangChu",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "disableFriendlyErrors",
+      "vi": "tatCanhBaoThanThien",
+      "loai": "ham",
+      "nhom": "khung_ve_nen",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "circle",
+      "vi": "veHinhTron",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "ellipse",
+      "vi": "veElip",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "rect",
+      "vi": "veHinhChuNhat",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "square",
+      "vi": "veHinhVuong",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "line",
+      "vi": "veDuongThang",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "point",
+      "vi": "veDiem",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "triangle",
+      "vi": "veTamGiac",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "quad",
+      "vi": "veTuGiac",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "arc",
+      "vi": "veCungTron",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "rectMode",
+      "vi": "cheDoHinhChuNhat",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "ellipseMode",
+      "vi": "cheDoElip",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "beginShape",
+      "vi": "batDauHinh",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "endShape",
+      "vi": "ketThucHinh",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "vertex",
+      "vi": "dinh",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "bezier",
+      "vi": "veDuongBezier",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "bezierVertex",
+      "vi": "dinhBezier",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "bezierPoint",
+      "vi": "diemBezier",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "bezierTangent",
+      "vi": "tiepTuyenBezier",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "bezierOrder",
+      "vi": "bacBezier",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "curveDetail",
+      "vi": "doChiTietDuongCong",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "spline",
+      "vi": "veDuongSpline",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "splineVertex",
+      "vi": "dinhSpline",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "splinePoint",
+      "vi": "diemSpline",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "splineTangent",
+      "vi": "tiepTuyenSpline",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "splineProperty",
+      "vi": "thuocTinhSpline",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "splineProperties",
+      "vi": "cacThuocTinhSpline",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "beginContour",
+      "vi": "batDauVetCat",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "endContour",
+      "vi": "ketThucVetCat",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "beginClip",
+      "vi": "batDauCat",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "endClip",
+      "vi": "ketThucCat",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "clip",
+      "vi": "catHinh",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "erase",
+      "vi": "batCheDoXoaVe",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "noErase",
+      "vi": "tatCheDoXoaVe",
+      "loai": "ham",
+      "nhom": "hinh_2d",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "box",
+      "vi": "veKhoiHop",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "sphere",
+      "vi": "veHinhCau",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "cylinder",
+      "vi": "veHinhTru",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "cone",
+      "vi": "veHinhNon",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "torus",
+      "vi": "veHinhXuyen",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "plane",
+      "vi": "veMatPhang",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "ellipsoid",
+      "vi": "veKhoiElip",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "camera",
+      "vi": "maCamera",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createCamera",
+      "vi": "taoCamera",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "setCamera",
+      "vi": "datCamera",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "perspective",
+      "vi": "phoiCanh",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "ortho",
+      "vi": "chieuTrucGiao",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "frustum",
+      "vi": "hinhChop",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "orbitControl",
+      "vi": "dieuKhienXoayQuanh",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "lights",
+      "vi": "chieuSangMacDinh",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "ambientLight",
+      "vi": "anhSangMoiTruong",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "directionalLight",
+      "vi": "anhSangDinhHuong",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "pointLight",
+      "vi": "anhSangDiem",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "spotLight",
+      "vi": "anhSangChieuRoi",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "lightFalloff",
+      "vi": "doSuyGiamAnhSang",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "specularColor",
+      "vi": "mauPhanXa",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "normalMaterial",
+      "vi": "vatLieuPhapTuyen",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "ambientMaterial",
+      "vi": "vatLieuMoiTruong",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "emissiveMaterial",
+      "vi": "vatLieuTuPhat",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "specularMaterial",
+      "vi": "vatLieuBongLoang",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "metalness",
+      "vi": "doKimLoai",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "shininess",
+      "vi": "doBong",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "noLights",
+      "vi": "tatDen",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "rotateX",
+      "vi": "xoayTrucX",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "rotateY",
+      "vi": "xoayTrucY",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "rotateZ",
+      "vi": "xoayTrucZ",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "shearX",
+      "vi": "keoNghiengX",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "shearY",
+      "vi": "keoNghiengY",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "applyMatrix",
+      "vi": "apDungMaTran",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "resetMatrix",
+      "vi": "datLaiMaTran",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createMatrix",
+      "vi": "taoMaTran",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "model",
+      "vi": "veModel3D",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "loadModel",
+      "vi": "taiModel3D",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createModel",
+      "vi": "taoModel3D",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "freeGeometry",
+      "vi": "giaiPhongHinhKhoi",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "buildGeometry",
+      "vi": "xayDungHinhKhoi",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "texture",
+      "vi": "anhTexture",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "textureMode",
+      "vi": "cheDoTexture",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "textureWrap",
+      "vi": "cheDoLapTexture",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "imageLight",
+      "vi": "anhSangTuAnh",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "panorama",
+      "vi": "anhToanCanh",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "worldToScreen",
+      "vi": "toaDoTheGioiSangManHinh",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "screenToWorld",
+      "vi": "toaDoManHinhSangTheGioi",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "debugMode",
+      "vi": "cheDoGoLoi",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "noDebugMode",
+      "vi": "tatCheDoGoLoi",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "linePerspective",
+      "vi": "phoiCanhDuongVien",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "strokeMode",
+      "vi": "cheDoNetVe3D",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "roll",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "fill",
+      "vi": "mauTo",
+      "loai": "ham",
+      "nhom": "mau_sac_net_ve",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "noFill",
+      "vi": "khongTo",
+      "loai": "ham",
+      "nhom": "mau_sac_net_ve",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "stroke",
+      "vi": "mauNet",
+      "loai": "ham",
+      "nhom": "mau_sac_net_ve",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "noStroke",
+      "vi": "khongNet",
+      "loai": "ham",
+      "nhom": "mau_sac_net_ve",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "strokeWeight",
+      "vi": "doDayNet",
+      "loai": "ham",
+      "nhom": "mau_sac_net_ve",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "color",
+      "vi": "maMau",
+      "loai": "ham",
+      "nhom": "mau_sac_net_ve",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "colorMode",
+      "vi": "cheDoMau",
+      "loai": "ham",
+      "nhom": "mau_sac_net_ve",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "strokeCap",
+      "vi": "kieuDauNet",
+      "loai": "ham",
+      "nhom": "mau_sac_net_ve",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "strokeJoin",
+      "vi": "kieuNoiNet",
+      "loai": "ham",
+      "nhom": "mau_sac_net_ve",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "red",
+      "vi": "kenhDo",
+      "loai": "ham",
+      "nhom": "mau_sac_net_ve",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "green",
+      "vi": "kenhXanhLuc",
+      "loai": "ham",
+      "nhom": "mau_sac_net_ve",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "blue",
+      "vi": "kenhXanhDuong",
+      "loai": "ham",
+      "nhom": "mau_sac_net_ve",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "alpha",
+      "vi": "kenhTrongSuot",
+      "loai": "ham",
+      "nhom": "mau_sac_net_ve",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "hue",
+      "vi": "sacDo",
+      "loai": "ham",
+      "nhom": "mau_sac_net_ve",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "saturation",
+      "vi": "doBaoHoaMau",
+      "loai": "ham",
+      "nhom": "mau_sac_net_ve",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "brightness",
+      "vi": "doSangMau",
+      "loai": "ham",
+      "nhom": "mau_sac_net_ve",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "lightness",
+      "vi": "doSangHSL",
+      "loai": "ham",
+      "nhom": "mau_sac_net_ve",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "lerpColor",
+      "vi": "tronMau",
+      "loai": "ham",
+      "nhom": "mau_sac_net_ve",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "blend",
+      "vi": "tronAnh",
+      "loai": "ham",
+      "nhom": "mau_sac_net_ve",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "blendMode",
+      "vi": "cheDoTron",
+      "loai": "ham",
+      "nhom": "mau_sac_net_ve",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "tint",
+      "vi": "nhuomMau",
+      "loai": "ham",
+      "nhom": "mau_sac_net_ve",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "noTint",
+      "vi": "khongNhuomMau",
+      "loai": "ham",
+      "nhom": "mau_sac_net_ve",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "paletteLerp",
+      "vi": "tronBangMau",
+      "loai": "ham",
+      "nhom": "mau_sac_net_ve",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "text",
+      "vi": "veVanBan",
+      "loai": "ham",
+      "nhom": "van_ban",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "textAlign",
+      "vi": "canLeVanBan",
+      "loai": "ham",
+      "nhom": "van_ban",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "textSize",
+      "vi": "coChuVanBan",
+      "loai": "ham",
+      "nhom": "van_ban",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "textFont",
+      "vi": "phongChu",
+      "loai": "ham",
+      "nhom": "van_ban",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "loadFont",
+      "vi": "taiPhongChu",
+      "loai": "ham",
+      "nhom": "van_ban",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "textStyle",
+      "vi": "kieuChu",
+      "loai": "ham",
+      "nhom": "van_ban",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "textWeight",
+      "vi": "doDamChu",
+      "loai": "ham",
+      "nhom": "van_ban",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "textLeading",
+      "vi": "khoangCachDong",
+      "loai": "ham",
+      "nhom": "van_ban",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "textWrap",
+      "vi": "ngatDongVanBan",
+      "loai": "ham",
+      "nhom": "van_ban",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "textDirection",
+      "vi": "huongVanBan",
+      "loai": "ham",
+      "nhom": "van_ban",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "textWidth",
+      "vi": "doRongVanBan",
+      "loai": "ham",
+      "nhom": "van_ban",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "textAscent",
+      "vi": "doCaoTrenChu",
+      "loai": "ham",
+      "nhom": "van_ban",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "textDescent",
+      "vi": "doCaoDuoiChu",
+      "loai": "ham",
+      "nhom": "van_ban",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "fontAscent",
+      "vi": "doCaoTrenPhongChu",
+      "loai": "ham",
+      "nhom": "van_ban",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "fontDescent",
+      "vi": "doCaoDuoiPhongChu",
+      "loai": "ham",
+      "nhom": "van_ban",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "fontBounds",
+      "vi": "khungBienPhongChu",
+      "loai": "ham",
+      "nhom": "van_ban",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "fontWidth",
+      "vi": "doRongPhongChu",
+      "loai": "ham",
+      "nhom": "van_ban",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "textBounds",
+      "vi": "khungBienVanBan",
+      "loai": "ham",
+      "nhom": "van_ban",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "textProperty",
+      "vi": "thuocTinhVanBan",
+      "loai": "ham",
+      "nhom": "van_ban",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "textProperties",
+      "vi": "cacThuocTinhVanBan",
+      "loai": "ham",
+      "nhom": "van_ban",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "image",
+      "vi": "veAnh",
+      "loai": "ham",
+      "nhom": "hinh_anh",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "loadImage",
+      "vi": "taiAnh",
+      "loai": "ham",
+      "nhom": "hinh_anh",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createImage",
+      "vi": "taoAnh",
+      "loai": "ham",
+      "nhom": "hinh_anh",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "imageMode",
+      "vi": "cheDoAnh",
+      "loai": "ham",
+      "nhom": "hinh_anh",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "get",
+      "vi": "layDiemAnh",
+      "loai": "ham",
+      "nhom": "hinh_anh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "set",
+      "vi": "datDiemAnh",
+      "loai": "ham",
+      "nhom": "hinh_anh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "copy",
+      "vi": "saoChepAnh",
+      "loai": "ham",
+      "nhom": "hinh_anh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "filter",
+      "vi": "locAnh",
+      "loai": "ham",
+      "nhom": "hinh_anh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "loadPixels",
+      "vi": "taiDiemAnh",
+      "loai": "ham",
+      "nhom": "hinh_anh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "updatePixels",
+      "vi": "capNhatDiemAnh",
+      "loai": "ham",
+      "nhom": "hinh_anh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "saveCanvas",
+      "vi": "luuKhungVe",
+      "loai": "ham",
+      "nhom": "hinh_anh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "saveGif",
+      "vi": "luuGif",
+      "loai": "ham",
+      "nhom": "hinh_anh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "saveFrames",
+      "vi": "luuCacKhungHinh",
+      "loai": "ham",
+      "nhom": "hinh_anh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "flipV",
+      "vi": "latDoc",
+      "loai": "ham",
+      "nhom": "hinh_anh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createAudio",
+      "vi": "taoAmThanh",
+      "loai": "ham",
+      "nhom": "dom_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createVideo",
+      "vi": "taoVideo",
+      "loai": "ham",
+      "nhom": "dom_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createCapture",
+      "vi": "taoQuayVideo",
+      "loai": "ham",
+      "nhom": "dom_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createElement",
+      "vi": "taoThanhPhan",
+      "loai": "ham",
+      "nhom": "dom_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createDiv",
+      "vi": "taoKhungDiv",
+      "loai": "ham",
+      "nhom": "dom_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createP",
+      "vi": "taoDoanVan",
+      "loai": "ham",
+      "nhom": "dom_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createSpan",
+      "vi": "taoDoanChu",
+      "loai": "ham",
+      "nhom": "dom_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createA",
+      "vi": "taoLienKet",
+      "loai": "ham",
+      "nhom": "dom_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createButton",
+      "vi": "taoNut",
+      "loai": "ham",
+      "nhom": "dom_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createCheckbox",
+      "vi": "taoOChon",
+      "loai": "ham",
+      "nhom": "dom_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createColorPicker",
+      "vi": "taoChonMau",
+      "loai": "ham",
+      "nhom": "dom_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createFileInput",
+      "vi": "taoChonTepTin",
+      "loai": "ham",
+      "nhom": "dom_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createInput",
+      "vi": "taoONhapLieu",
+      "loai": "ham",
+      "nhom": "dom_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createRadio",
+      "vi": "taoNutTron",
+      "loai": "ham",
+      "nhom": "dom_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createSelect",
+      "vi": "taoHopChon",
+      "loai": "ham",
+      "nhom": "dom_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createSlider",
+      "vi": "taoThanhTruot",
+      "loai": "ham",
+      "nhom": "dom_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createImg",
+      "vi": "taoTheAnh",
+      "loai": "ham",
+      "nhom": "dom_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "select",
+      "vi": "chonThanhPhan",
+      "loai": "ham",
+      "nhom": "dom_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "selectAll",
+      "vi": "chonTatCa",
+      "loai": "ham",
+      "nhom": "dom_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "removeElements",
+      "vi": "xoaTatCaThanhPhan",
+      "loai": "ham",
+      "nhom": "dom_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "setContent",
+      "vi": "datNoiDung",
+      "loai": "ham",
+      "nhom": "dom_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "mouseX",
+      "vi": "toaDoXChuot",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "mouseY",
+      "vi": "toaDoYChuot",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "pmouseX",
+      "vi": "toaDoXChuotTruoc",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "pmouseY",
+      "vi": "toaDoYChuotTruoc",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "mouseIsPressed",
+      "vi": "dangNhanChuot",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "mouseButton",
+      "vi": "nutChuotDangNhan",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "key",
+      "vi": "phimHienTai",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "keyCode",
+      "vi": "maPhim",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "keyIsPressed",
+      "vi": "dangNhanPhim",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "width",
+      "vi": "doRong",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "height",
+      "vi": "doCao",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "frameCount",
+      "vi": "soKhungHinh",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "windowWidth",
+      "vi": "doRongCuaSo",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "windowHeight",
+      "vi": "doCaoCuaSo",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "displayWidth",
+      "vi": "doRongManHinh",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "displayHeight",
+      "vi": "doCaoManHinh",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "deltaTime",
+      "vi": "thoiGianTre",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "focused",
+      "vi": "dangDuocChon",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "pixels",
+      "vi": "mangDiemAnh",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "drawingContext",
+      "vi": "nguCanhVe",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "winMouseX",
+      "vi": "toaDoXChuotCuaSo",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "winMouseY",
+      "vi": "toaDoYChuotCuaSo",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "pwinMouseX",
+      "vi": "toaDoXChuotCuaSoTruoc",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "pwinMouseY",
+      "vi": "toaDoYChuotCuaSoTruoc",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "keyIsDown",
+      "vi": "phimDangDuocNhan",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "touches",
+      "vi": "danhSachDiemCham",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "accelerationX",
+      "vi": "giaTocX",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "accelerationY",
+      "vi": "giaTocY",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "accelerationZ",
+      "vi": "giaTocZ",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "pAccelerationX",
+      "vi": "giaTocXTruoc",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "pAccelerationY",
+      "vi": "giaTocYTruoc",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "pAccelerationZ",
+      "vi": "giaTocZTruoc",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "rotationX",
+      "vi": "gocXoayX",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "rotationY",
+      "vi": "gocXoayY",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "rotationZ",
+      "vi": "gocXoayZ",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "pRotationX",
+      "vi": "gocXoayXTruoc",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "pRotationY",
+      "vi": "gocXoayYTruoc",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "pRotationZ",
+      "vi": "gocXoayZTruoc",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "deviceOrientation",
+      "vi": "huongThietBi",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "turnAxis",
+      "vi": "trucXoayThietBi",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "movedX",
+      "vi": "doDiChuyenX",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "movedY",
+      "vi": "doDiChuyenY",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "setMoveThreshold",
+      "vi": "datNguongDiChuyen",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "setShakeThreshold",
+      "vi": "datNguongLac",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "exitPointerLock",
+      "vi": "thoatKhoaChuot",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "requestPointerLock",
+      "vi": "khoaChuot",
+      "loai": "bien",
+      "nhom": "bien_he_thong",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "map",
+      "vi": "bienDoi",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "constrain",
+      "vi": "gioiHan",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "dist",
+      "vi": "khoangCach",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "lerp",
+      "vi": "noiSuy",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "random",
+      "vi": "ngauNhien",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "randomSeed",
+      "vi": "hatGiongNgauNhien",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "translate",
+      "vi": "dichChuyen",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "rotate",
+      "vi": "xoay",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "scale",
+      "vi": "phongToThuNho",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "randomGaussian",
+      "vi": "ngauNhienGauss",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "noise",
+      "vi": "nhieuPerlin",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "noiseDetail",
+      "vi": "doChiTietNhieu",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "noiseSeed",
+      "vi": "hatGiongNhieu",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "shuffle",
+      "vi": "xaoTron",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "norm",
+      "vi": "chuanHoa",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "mag",
+      "vi": "doLon",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "degrees",
+      "vi": "doiSangDo",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "radians",
+      "vi": "doiSangRadian",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "angleMode",
+      "vi": "cheDoGoc",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "sq",
+      "vi": "binhPhuong",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "sqrt",
+      "vi": "canBacHai",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "pow",
+      "vi": "luyThua",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "abs",
+      "vi": "triTuyetDoi",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "floor",
+      "vi": "lamTronXuong",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "ceil",
+      "vi": "lamTronLen",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "round",
+      "vi": "lamTron",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "exp",
+      "vi": "luyThuaE",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "log",
+      "vi": "logarit",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "fract",
+      "vi": "phanThapPhan",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "smoothstep",
+      "vi": "buocLamMuot",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createVector",
+      "vi": "taoVector",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "min",
+      "vi": "gtNhoNhat",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "max",
+      "vi": "gtLonNhat",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "sin",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "cos",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "tan",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "asin",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "acos",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "atan",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "atan2",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "int",
+      "vi": "soNguyen",
+      "loai": "ham",
+      "nhom": "du_lieu",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "float",
+      "vi": "soThuc",
+      "loai": "ham",
+      "nhom": "du_lieu",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "str",
+      "vi": "chuoi",
+      "loai": "ham",
+      "nhom": "du_lieu",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "boolean",
+      "vi": "logic",
+      "loai": "ham",
+      "nhom": "du_lieu",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "char",
+      "vi": "kyTu",
+      "loai": "ham",
+      "nhom": "du_lieu",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "byte",
+      "vi": "byteSo",
+      "loai": "ham",
+      "nhom": "du_lieu",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "unchar",
+      "vi": "kyTuSangSo",
+      "loai": "ham",
+      "nhom": "du_lieu",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "hex",
+      "vi": "soSangHex",
+      "loai": "ham",
+      "nhom": "du_lieu",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "unhex",
+      "vi": "hexSangSo",
+      "loai": "ham",
+      "nhom": "du_lieu",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "nf",
+      "vi": "dinhDangSo",
+      "loai": "ham",
+      "nhom": "du_lieu",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "nfc",
+      "vi": "dinhDangSoPhay",
+      "loai": "ham",
+      "nhom": "du_lieu",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "nfp",
+      "vi": "dinhDangSoCoDau",
+      "loai": "ham",
+      "nhom": "du_lieu",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "nfs",
+      "vi": "dinhDangSoCachDau",
+      "loai": "ham",
+      "nhom": "du_lieu",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "storeItem",
+      "vi": "luuMuc",
+      "loai": "ham",
+      "nhom": "du_lieu",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "getItem",
+      "vi": "layMuc",
+      "loai": "ham",
+      "nhom": "du_lieu",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "clearStorage",
+      "vi": "xoaBoNho",
+      "loai": "ham",
+      "nhom": "du_lieu",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "removeItem",
+      "vi": "xoaMuc",
+      "loai": "ham",
+      "nhom": "du_lieu",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createStorage",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "du_lieu",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "loadJSON",
+      "vi": "taiJSON",
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "loadStrings",
+      "vi": "taiChuoi",
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "loadTable",
+      "vi": "taiBang",
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "loadXML",
+      "vi": "taiXML",
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "saveJSON",
+      "vi": "luuJSON",
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "saveStrings",
+      "vi": "luuChuoi",
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "saveTable",
+      "vi": "luuBang",
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "httpGet",
+      "vi": "layHTTP",
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "httpPost",
+      "vi": "guiHTTP",
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "httpDo",
+      "vi": "thucHienHTTP",
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "write",
+      "vi": "ghiTep",
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "print",
+      "vi": "in",
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "downloadFile",
+      "vi": "taiTepVe",
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "loadBytes",
+      "vi": "taiNhiPhan",
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "loadBlob",
+      "vi": "taiBlob",
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "getURL",
+      "vi": "layURL",
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "getURLParams",
+      "vi": "layThamSoURL",
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "getURLPath",
+      "vi": "layDuongDanURL",
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "fetchScript",
+      "vi": "taiScript",
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createWriter",
+      "vi": "taoTepGhi",
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "close",
+      "vi": "dong",
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "saveObj",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "saveStl",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "day",
+      "vi": "ngayHienTai",
+      "loai": "ham",
+      "nhom": "thoi_gian",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "month",
+      "vi": "thangHienTai",
+      "loai": "ham",
+      "nhom": "thoi_gian",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "year",
+      "vi": "namHienTai",
+      "loai": "ham",
+      "nhom": "thoi_gian",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "hour",
+      "vi": "gioHienTai",
+      "loai": "ham",
+      "nhom": "thoi_gian",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "minute",
+      "vi": "phutHienTai",
+      "loai": "ham",
+      "nhom": "thoi_gian",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "second",
+      "vi": "giayHienTai",
+      "loai": "ham",
+      "nhom": "thoi_gian",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "millis",
+      "vi": "soMiliGiay",
+      "loai": "ham",
+      "nhom": "thoi_gian",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "shader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "resetShader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "createShader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "loadShader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "createFilterShader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "loadFilterShader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "baseColorShader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "baseComputeShader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "baseFilterShader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "baseMaterialShader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "baseNormalShader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "baseStrokeShader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "buildColorShader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "buildComputeShader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "buildFilterShader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "buildMaterialShader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "buildNormalShader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "buildStrokeShader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "imageShader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "strokeShader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "compute",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "uniformStorage",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "vertexProperty",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "shouldDiscard",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "afterFragment",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "afterVertex",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "beforeFragment",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "beforeVertex",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "getWorldInputs",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "getPixelInputs",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "getFinalColor",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "getColor",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "getObjectInputs",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "getCameraInputs",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "mix",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "getFilterGraphicsLayer",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "getTexture",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "mapToReference",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "fromAxisAngle",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "clearDepth",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "normal",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "worldInputs",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "pixelInputs",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "objectInputs",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "cameraInputs",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "combineColors",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "baseColor",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "filterColor",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "finalColor",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "ambient",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "diffuse",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "specular",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "emissive",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "position",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "texCoord",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "tangent",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "texelSize",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "webglVersion",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "canvasSize",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "canvasContent",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "center",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "centerX",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "centerY",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "centerZ",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "eyeX",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "eyeY",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "eyeZ",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "upX",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "upY",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "upZ",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "multiply",
+      "vi": "nhan",
+      "loai": "ham",
+      "nhom": "toan_hoc",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "save",
+      "vi": "luu",
+      "loai": "ham",
+      "nhom": "nhap_xuat",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "splitTokens",
+      "vi": "tachChuoi",
+      "loai": "ham",
+      "nhom": "du_lieu",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "createFramebuffer",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "rotateBy",
+      "vi": "xoayTheo",
+      "loai": "ham",
+      "nhom": "hinh_3d_webgl",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "ambientColor",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "depth",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "opacity",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "loadColorShader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "loadMaterialShader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "loadNormalShader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "loadStrokeShader",
+      "vi": null,
+      "loai": "ham",
+      "nhom": "shader_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "LEFT",
+      "vi": "TRAI",
+      "loai": "hang_so",
+      "nhom": "vi_tri_can_le",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "RIGHT",
+      "vi": "PHAI",
+      "loai": "hang_so",
+      "nhom": "vi_tri_can_le",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "CENTER",
+      "vi": "GIUA",
+      "loai": "hang_so",
+      "nhom": "vi_tri_can_le",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "TOP",
+      "vi": "TREN",
+      "loai": "hang_so",
+      "nhom": "vi_tri_can_le",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "BOTTOM",
+      "vi": "DUOI",
+      "loai": "hang_so",
+      "nhom": "vi_tri_can_le",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "BASELINE",
+      "vi": "DUONG_CO_SO",
+      "loai": "hang_so",
+      "nhom": "vi_tri_can_le",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "CORNER",
+      "vi": "GOC",
+      "loai": "hang_so",
+      "nhom": "vi_tri_can_le",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "CORNERS",
+      "vi": "HAI_GOC",
+      "loai": "hang_so",
+      "nhom": "vi_tri_can_le",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "RADIUS",
+      "vi": "BAN_KINH",
+      "loai": "hang_so",
+      "nhom": "vi_tri_can_le",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "OPEN",
+      "vi": "MO",
+      "loai": "hang_so",
+      "nhom": "hinh_dang",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "CLOSE",
+      "vi": "DONG",
+      "loai": "hang_so",
+      "nhom": "hinh_dang",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "CHORD",
+      "vi": "DAY_CUNG",
+      "loai": "hang_so",
+      "nhom": "hinh_dang",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "PIE",
+      "vi": "HINH_QUAT",
+      "loai": "hang_so",
+      "nhom": "hinh_dang",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "ROUND",
+      "vi": "BO_TRON",
+      "loai": "hang_so",
+      "nhom": "hinh_dang",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "SQUARE",
+      "vi": "VUONG",
+      "loai": "hang_so",
+      "nhom": "hinh_dang",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "PROJECT",
+      "vi": "NHO_RA",
+      "loai": "hang_so",
+      "nhom": "hinh_dang",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "MITER",
+      "vi": "VAT_GOC",
+      "loai": "hang_so",
+      "nhom": "hinh_dang",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "BEVEL",
+      "vi": "VAT_CANH",
+      "loai": "hang_so",
+      "nhom": "hinh_dang",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "JOIN",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "hinh_dang",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "BEZIER",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "hinh_dang",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "CURVE",
+      "vi": "DUONG_CONG",
+      "loai": "hang_so",
+      "nhom": "hinh_dang",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "QUADRATIC",
+      "vi": "BAC_HAI",
+      "loai": "hang_so",
+      "nhom": "hinh_dang",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "EMPTY_PATH",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "hinh_dang",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "PATH",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "hinh_dang",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "RADIANS",
+      "vi": "RADIAN",
+      "loai": "hang_so",
+      "nhom": "goc_do",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "DEGREES",
+      "vi": "DO",
+      "loai": "hang_so",
+      "nhom": "goc_do",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "PI",
+      "vi": "SO_PI",
+      "loai": "hang_so",
+      "nhom": "hang_so_toan",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "TWO_PI",
+      "vi": "HAI_PI",
+      "loai": "hang_so",
+      "nhom": "hang_so_toan",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "HALF_PI",
+      "vi": "NUA_PI",
+      "loai": "hang_so",
+      "nhom": "hang_so_toan",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "QUARTER_PI",
+      "vi": "MOT_PHAN_TU_PI",
+      "loai": "hang_so",
+      "nhom": "hang_so_toan",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "DEG_TO_RAD",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "hang_so_toan",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "RAD_TO_DEG",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "hang_so_toan",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "TAU",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "hang_so_toan",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "BLEND",
+      "vi": "TRON",
+      "loai": "hang_so",
+      "nhom": "che_do_tron_mau",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "ADD",
+      "vi": "CONG",
+      "loai": "hang_so",
+      "nhom": "che_do_tron_mau",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "DARKEST",
+      "vi": "TOI_NHAT",
+      "loai": "hang_so",
+      "nhom": "che_do_tron_mau",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "LIGHTEST",
+      "vi": "SANG_NHAT",
+      "loai": "hang_so",
+      "nhom": "che_do_tron_mau",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "DIFFERENCE",
+      "vi": "KHAC_BIET",
+      "loai": "hang_so",
+      "nhom": "che_do_tron_mau",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "EXCLUSION",
+      "vi": "LOAI_TRU",
+      "loai": "hang_so",
+      "nhom": "che_do_tron_mau",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "MULTIPLY",
+      "vi": "NHAN",
+      "loai": "hang_so",
+      "nhom": "che_do_tron_mau",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "SCREEN",
+      "vi": "MAN_HINH",
+      "loai": "hang_so",
+      "nhom": "che_do_tron_mau",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "OVERLAY",
+      "vi": "PHU",
+      "loai": "hang_so",
+      "nhom": "che_do_tron_mau",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "HARD_LIGHT",
+      "vi": "ANH_SANG_MANH",
+      "loai": "hang_so",
+      "nhom": "che_do_tron_mau",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "SOFT_LIGHT",
+      "vi": "ANH_SANG_NHE",
+      "loai": "hang_so",
+      "nhom": "che_do_tron_mau",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "DODGE",
+      "vi": "TRANH_SANG",
+      "loai": "hang_so",
+      "nhom": "che_do_tron_mau",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "BURN",
+      "vi": "CHAY_TOI",
+      "loai": "hang_so",
+      "nhom": "che_do_tron_mau",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "REMOVE",
+      "vi": "XOA",
+      "loai": "hang_so",
+      "nhom": "che_do_tron_mau",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "SUBTRACT",
+      "vi": "TRU",
+      "loai": "hang_so",
+      "nhom": "che_do_tron_mau",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "RGB",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khong_gian_mau",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "RGBA",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khong_gian_mau",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "HSB",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khong_gian_mau",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "HSL",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khong_gian_mau",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "HWB",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khong_gian_mau",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "LAB",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khong_gian_mau",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "LCH",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khong_gian_mau",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "OKLAB",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khong_gian_mau",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "OKLCH",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khong_gian_mau",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "RGBP3",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khong_gian_mau",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "P2D",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "bo_ket_xuat_do_hoa",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "P2DP3",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "bo_ket_xuat_do_hoa",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "WEBGL",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "bo_ket_xuat_do_hoa",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "WEBGL2",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "bo_ket_xuat_do_hoa",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "WEBGPU",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "bo_ket_xuat_do_hoa",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "ARROW",
+      "vi": "MUI_TEN",
+      "loai": "hang_so",
+      "nhom": "con_tro_chuot",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "CROSS",
+      "vi": "CHU_THAP",
+      "loai": "hang_so",
+      "nhom": "con_tro_chuot",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "HAND",
+      "vi": "BAN_TAY",
+      "loai": "hang_so",
+      "nhom": "con_tro_chuot",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "MOVE",
+      "vi": "DI_CHUYEN",
+      "loai": "hang_so",
+      "nhom": "con_tro_chuot",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "TEXT",
+      "vi": "VAN_BAN",
+      "loai": "hang_so",
+      "nhom": "con_tro_chuot",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "WAIT",
+      "vi": "CHO",
+      "loai": "hang_so",
+      "nhom": "con_tro_chuot",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "BACKSPACE",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "ma_phim",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "DELETE",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "ma_phim",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "ENTER",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "ma_phim",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "RETURN",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "ma_phim",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "TAB",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "ma_phim",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "ESCAPE",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "ma_phim",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "SHIFT",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "ma_phim",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "CONTROL",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "ma_phim",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "OPTION",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "ma_phim",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "ALT",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "ma_phim",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "UP_ARROW",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "ma_phim",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "DOWN_ARROW",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "ma_phim",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "LEFT_ARROW",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "ma_phim",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "RIGHT_ARROW",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "ma_phim",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "NORMAL",
+      "vi": "BINH_THUONG",
+      "loai": "hang_so",
+      "nhom": "kieu_chu",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "ITALIC",
+      "vi": "IN_NGHIENG",
+      "loai": "hang_so",
+      "nhom": "kieu_chu",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "BOLD",
+      "vi": "IN_DAM",
+      "loai": "hang_so",
+      "nhom": "kieu_chu",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "BOLDITALIC",
+      "vi": "IN_DAM_NGHIENG",
+      "loai": "hang_so",
+      "nhom": "kieu_chu",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "WORD",
+      "vi": "THEO_TU",
+      "loai": "hang_so",
+      "nhom": "kieu_chu",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "CHAR",
+      "vi": "THEO_KY_TU",
+      "loai": "hang_so",
+      "nhom": "kieu_chu",
+      "do_uu_tien": "co_ban",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "POINTS",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "che_do_ve_3d",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "LINES",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "che_do_ve_3d",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "LINE_STRIP",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "che_do_ve_3d",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "LINE_LOOP",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "che_do_ve_3d",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "TRIANGLES",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "che_do_ve_3d",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "TRIANGLE_FAN",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "che_do_ve_3d",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "TRIANGLE_STRIP",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "che_do_ve_3d",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "QUADS",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "che_do_ve_3d",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "QUAD_STRIP",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "che_do_ve_3d",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "TESS",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "che_do_ve_3d",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "THRESHOLD",
+      "vi": "NGUONG",
+      "loai": "hang_so",
+      "nhom": "bo_loc_anh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "GRAY",
+      "vi": "XAM",
+      "loai": "hang_so",
+      "nhom": "bo_loc_anh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "OPAQUE",
+      "vi": "MO_DUC",
+      "loai": "hang_so",
+      "nhom": "bo_loc_anh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "INVERT",
+      "vi": "DAO_MAU",
+      "loai": "hang_so",
+      "nhom": "bo_loc_anh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "POSTERIZE",
+      "vi": "GIAM_MAU",
+      "loai": "hang_so",
+      "nhom": "bo_loc_anh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "BLUR",
+      "vi": "LAM_MO",
+      "loai": "hang_so",
+      "nhom": "bo_loc_anh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "ERODE",
+      "vi": "CO_LAI",
+      "loai": "hang_so",
+      "nhom": "bo_loc_anh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "DILATE",
+      "vi": "NO_RA",
+      "loai": "hang_so",
+      "nhom": "bo_loc_anh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "VIDEO",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "loai_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "AUDIO",
+      "vi": "AM_THANH",
+      "loai": "hang_so",
+      "nhom": "loai_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "IMAGE",
+      "vi": "HINH_ANH",
+      "loai": "hang_so",
+      "nhom": "loai_media",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "LANDSCAPE",
+      "vi": "NGANG",
+      "loai": "hang_so",
+      "nhom": "bo_cuc_man_hinh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "PORTRAIT",
+      "vi": "DOC",
+      "loai": "hang_so",
+      "nhom": "bo_cuc_man_hinh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "AUTO",
+      "vi": "TU_DONG",
+      "loai": "hang_so",
+      "nhom": "bo_cuc_man_hinh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "CONTAIN",
+      "vi": "VUA_KHUNG",
+      "loai": "hang_so",
+      "nhom": "bo_cuc_man_hinh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "COVER",
+      "vi": "PHU_KIN",
+      "loai": "hang_so",
+      "nhom": "bo_cuc_man_hinh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "FULL",
+      "vi": "DAY_DU",
+      "loai": "hang_so",
+      "nhom": "bo_cuc_man_hinh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "SIMPLE",
+      "vi": "DON_GIAN",
+      "loai": "hang_so",
+      "nhom": "bo_cuc_man_hinh",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "GRID",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khac_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "LABEL",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khac_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "FALLBACK",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khac_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "INCLUDE",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khac_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "EXCLUDE",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khac_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "IMMEDIATE",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khac_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "REPEAT",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khac_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "CLAMP",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khac_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "MIRROR",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khac_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "NEAREST",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khac_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "LINEAR",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khac_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "LINEAR_MIPMAP",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khac_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "HALF_FLOAT",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khac_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "FLOAT",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khac_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "UNSIGNED_BYTE",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khac_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "UNSIGNED_INT",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khac_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "MAX_GIF_PIXELS",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khac_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "VERSION",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khac_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "AXES",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khac_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "FILL",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khac_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "STROKE",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khac_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "TEXTURE",
+      "vi": null,
+      "loai": "hang_so",
+      "nhom": "khac_nang_cao",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "giu_nguyen"
+    },
+    {
+      "en": "FLAT",
+      "vi": "PHANG",
+      "loai": "hang_so",
+      "nhom": "che_do_ve_3d",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "SMOOTH",
+      "vi": "MUOT",
+      "loai": "hang_so",
+      "nhom": "che_do_ve_3d",
+      "do_uu_tien": "nang_cao",
+      "de_xuat": "dich"
+    },
+    {
+      "en": "REPLACE",
+      "vi": "THAY_THE",
+      "loai": "hang_so",
+      "nhom": "che_do_tron_mau",
+      "do_uu_tien": "trung_cap",
+      "de_xuat": "dich"
+    }
+  ],
+  "danh_sach_noi_bo_khong_dua_vao_tu_dien": [
+    "_axesIcon",
+    "_error",
+    "_friendlyAutoplayError",
+    "_friendlyError",
+    "_friendlyFileLoadError",
+    "_friendlyParamError",
+    "_fromDegrees",
+    "_fromRadians",
+    "_grid",
+    "_mouseWheelDeltaY",
+    "_pmouseWheelDeltaY",
+    "_report",
+    "_toDegrees",
+    "_toRadians",
+    "begin",
+    "checkForUserDefinedFunctions",
+    "code",
+    "computeEditDistance",
+    "data",
+    "defineMisusedAtTopLevelCode",
+    "end",
+    "extractUserDefinedVariablesAndFuncs",
+    "fesErrorMonitor",
+    "file",
+    "generateZodSchemasForFunc",
+    "getUserCode",
+    "gid",
+    "handleMisspelling",
+    "helpForMisusedAtTopLevelCode",
+    "instanceID",
+    "name",
+    "p5",
+    "printFriendlyStack",
+    "processStack",
+    "registerAddon",
+    "size",
+    "subtype",
+    "type"
+  ]
+}
