@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VietP5 — Hướng dẫn & Tra cứu từ điển</title>
+<style>
+  :root { --mau-nhan: #ED225D; color-scheme: dark; }
+  html, body { margin:0; background:#1e1e1e; color:#e6e6e6; font-family: system-ui, sans-serif; }
+  a { color:#7bb3ff; }
+  header {
+    padding:18px 20px; background:#2d2d2d; border-bottom:1px solid #111;
+    position:sticky; top:0; z-index:10;
+  }
+  header h1 { margin:0 0 4px; font-size:20px; }
+  header p { margin:0; color:#9aa4b2; font-size:13.5px; }
+
+  #gioi-thieu {
+    max-width:900px; margin:0 auto; padding:20px; line-height:1.7; font-size:14.5px;
+  }
+  #gioi-thieu h2 { font-size:16px; color:#fff; margin-top:28px; }
+  #gioi-thieu code, .ten-vi, .ten-en {
+    font-family:Consolas, monospace; background:#2a2a2a; padding:1px 6px; border-radius:4px;
+  }
+  .ten-vi { color:#7ee787; }
+  .ten-en { color:#9aa4b2; }
+
+  #thanh-cong-cu {
+    max-width:900px; margin:0 auto; padding:0 20px 16px; display:flex; gap:8px; flex-wrap:wrap;
+    position:sticky; top:78px; background:#1e1e1e; z-index:9; padding-top:10px;
+  }
+  #o-tim-kiem {
+    flex:1; min-width:200px; padding:9px 12px; border-radius:6px; border:1px solid #444;
+    background:#252526; color:#eee; font-size:14px;
+  }
+  select {
+    padding:9px 10px; border-radius:6px; border:1px solid #444; background:#252526; color:#eee; font-size:13.5px;
+  }
+  #so-luong-ket-qua { align-self:center; font-size:12.5px; color:#9aa4b2; }
+
+  #danh-sach { max-width:900px; margin:0 auto; padding:0 20px 60px; }
+  .nhom-tieu-de {
+    font-size:15px; font-weight:600; color:#fff; margin:26px 0 8px;
+    padding-bottom:6px; border-bottom:2px solid var(--mau-nhan);
+  }
+  .the-muc {
+    display:flex; align-items:center; gap:10px; padding:10px 12px; margin-bottom:6px;
+    background:#252526; border-radius:8px; border-left:3px solid transparent; flex-wrap:wrap;
+  }
+  .the-muc:hover { border-left-color: var(--mau-nhan); background:#2a2d2e; }
+  .the-muc .cot-ten { display:flex; align-items:center; gap:8px; flex:1; min-width:220px; }
+  .mui-ten { color:#666; }
+  .nhan-do-uu-tien {
+    font-size:10px; padding:2px 7px; border-radius:10px; text-transform:uppercase; letter-spacing:.03em;
+  }
+  .nhan-co_ban { background:#1f4d2e; color:#7ee787; }
+  .nhan-trung_cap { background:#4d3d1f; color:#ffd166; }
+  .nhan-nang_cao { background:#4d1f2e; color:#ff8fa3; }
+  .nhan-loai { font-size:10px; padding:2px 7px; border-radius:10px; background:#333; color:#aaa; }
+  .lien-ket-them { font-size:12.5px; white-space:nowrap; }
+  #trang-thai-tai { text-align:center; padding:40px; color:#9aa4b2; }
+  #khong-co-ket-qua { display:none; text-align:center; padding:40px; color:#9aa4b2; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📖 VietP5 — Hướng dẫn &amp; Tra cứu từ điển</h1>
+  <p>Toàn bộ từ khóa tiếng Việt hiện có thể dùng trong VietP5, dịch song song với p5.js.</p>
+</header>
+
+<div id="gioi-thieu">
+  <h2>Cách dùng nhanh</h2>
+  <p>
+    Trong trình soạn thảo, cứ viết mã bằng tên tiếng Việt ở cột <b>Tiếng Việt</b> bên dưới —
+    ví dụ <code class="ten-vi">veHinhTron(50, 50, 30)</code> thay cho
+    <code class="ten-en">circle(50, 50, 30)</code>. Khi bấm nút <b>⇄ Đổi ngôn ngữ</b> hoặc
+    <b>▶ Chạy</b>, hệ thống tự dịch sang tiếng Anh chuẩn của p5.js trước khi thực thi.
+  </p>
+  <p>
+    Khi gõ trong ô soạn thảo, gõ vài ký tự đầu là danh sách gợi ý (autocomplete) sẽ hiện tên
+    tiếng Việt kèm tên tiếng Anh tương ứng — không cần thuộc lòng hết trang này, chỉ cần tra khi cần.
+  </p>
+  <h2>Mức độ ưu tiên</h2>
+  <p>
+    <span class="nhan-do-uu-tien nhan-co_ban">CƠ BẢN</span> — dùng ngay từ những bài học đầu tiên (setup/draw, hình khối, màu sắc, chuột/phím).<br>
+    <span class="nhan-do-uu-tien nhan-trung_cap">TRUNG CẤP</span> — ảnh, văn bản, giao diện, tệp tin, thời gian.<br>
+    <span class="nhan-do-uu-tien nhan-nang_cao">NÂNG CAO</span> — đồ họa 3D/WebGL, shader — thường chỉ cần khi làm dự án phức tạp.
+  </p>
+</div>
+
+<div id="thanh-cong-cu">
+  <input id="o-tim-kiem" type="text" placeholder="🔍 Tìm theo tên tiếng Việt hoặc tiếng Anh...">
+  <select id="loc-nhom"><option value="">Tất cả nhóm</option></select>
+  <select id="loc-do-uu-tien">
+    <option value="">Tất cả mức độ</option>
+    <option value="co_ban">Cơ bản</option>
+    <option value="trung_cap">Trung cấp</option>
+    <option value="nang_cao">Nâng cao</option>
+  </select>
+  <span id="so-luong-ket-qua"></span>
+</div>
+
+<div id="danh-sach">
+  <div id="trang-thai-tai">Đang tải từ điển...</div>
+  <div id="khong-co-ket-qua">Không tìm thấy mục nào khớp.</div>
+</div>
+
+<script>
+  // Ten hien thi than thien cho tung nhom (khoa noi bo -> nhan tieng Viet)
+  const NHAN_NHOM = {
+    vong_doi_su_kien: 'Vòng đời & sự kiện',
+    khung_ve_nen: 'Khung vẽ & nền',
+    hinh_2d: 'Hình học 2D',
+    hinh_3d_webgl: 'Hình học 3D / WebGL / Camera / Ánh sáng',
+    mau_sac_net_ve: 'Màu sắc & nét vẽ',
+    van_ban: 'Văn bản (Typography)',
+    hinh_anh: 'Hình ảnh (Image)',
+    dom_media: 'Giao diện & đa phương tiện (DOM/Media)',
+    bien_he_thong: 'Biến hệ thống',
+    toan_hoc: 'Toán học & biến đổi',
+    du_lieu: 'Dữ liệu: chuyển kiểu, định dạng, lưu trữ',
+    nhap_xuat: 'Nhập / xuất tệp (IO), HTTP',
+    thoi_gian: 'Thời gian',
+    shader_nang_cao: 'Shader nâng cao (p5.strands)',
+    vi_tri_can_le: 'Vị trí & căn lề',
+    hinh_dang: 'Kiểu hình dạng',
+    goc_do: 'Góc độ',
+    hang_so_toan: 'Hằng số toán học',
+    che_do_tron_mau: 'Chế độ trộn màu (Blend mode)',
+    khong_gian_mau: 'Không gian màu',
+    bo_ket_xuat_do_hoa: 'Bộ kết xuất đồ họa (Renderer)',
+    con_tro_chuot: 'Con trỏ chuột',
+    ma_phim: 'Mã phím',
+    kieu_chu: 'Kiểu chữ',
+    che_do_ve_3d: 'Chế độ vẽ 3D',
+    bo_loc_anh: 'Bộ lọc ảnh',
+    loai_media: 'Loại media',
+    bo_cuc_man_hinh: 'Bố cục màn hình',
+    khac_nang_cao: 'Khác (nâng cao)'
+  };
+
+  let duLieuGoc = [];
+
+  fetch('./dic.json').then(r => r.json()).then(function (json) {
+    duLieuGoc = json.tu_dien.filter(m => m.vi); // chi lay 407 muc DA DICH
+    document.getElementById('trang-thai-tai').remove();
+
+    // Do danh sach nhom vao bo loc, sap theo thu tu xuat hien tu nhien
+    const nhomDaThay = [];
+    duLieuGoc.forEach(m => { if (!nhomDaThay.includes(m.nhom)) nhomDaThay.push(m.nhom); });
+    const oLocNhom = document.getElementById('loc-nhom');
+    nhomDaThay.forEach(function (nhom) {
+      const o = document.createElement('option');
+      o.value = nhom;
+      o.textContent = NHAN_NHOM[nhom] || nhom;
+      oLocNhom.appendChild(o);
+    });
+
+    veLaiDanhSach();
+  }).catch(function (loi) {
+    document.getElementById('trang-thai-tai').textContent =
+      'Không tải được dic.json (' + loi.message + '). Hãy chạy trang này qua local server (vd: python3 -m http.server) thay vì mở file trực tiếp.';
+  });
+
+  function veLaiDanhSach() {
+    const tuKhoa = document.getElementById('o-tim-kiem').value.trim().toLowerCase();
+    const nhomLoc = document.getElementById('loc-nhom').value;
+    const doUuTienLoc = document.getElementById('loc-do-uu-tien').value;
+
+    const ketQua = duLieuGoc.filter(function (m) {
+      if (nhomLoc && m.nhom !== nhomLoc) return false;
+      if (doUuTienLoc && m.do_uu_tien !== doUuTienLoc) return false;
+      if (tuKhoa && !m.vi.toLowerCase().includes(tuKhoa) && !m.en.toLowerCase().includes(tuKhoa)) return false;
+      return true;
+    });
+
+    document.getElementById('so-luong-ket-qua').textContent = ketQua.length + ' / ' + duLieuGoc.length + ' mục';
+    document.getElementById('khong-co-ket-qua').style.display = ketQua.length ? 'none' : 'block';
+
+    // Nhom lai theo "nhom" de hien thi co tieu de, giu thu tu nhu trong du lieu goc
+    const theoNhom = new Map();
+    ketQua.forEach(function (m) {
+      if (!theoNhom.has(m.nhom)) theoNhom.set(m.nhom, []);
+      theoNhom.get(m.nhom).push(m);
+    });
+
+    const oDanhSach = document.getElementById('danh-sach');
+    oDanhSach.querySelectorAll('.nhom-tieu-de, .the-muc').forEach(function (el) { el.remove(); });
+
+    theoNhom.forEach(function (danhSachMuc, nhom) {
+      const tieuDe = document.createElement('div');
+      tieuDe.className = 'nhom-tieu-de';
+      tieuDe.textContent = (NHAN_NHOM[nhom] || nhom) + ' (' + danhSachMuc.length + ')';
+      oDanhSach.appendChild(tieuDe);
+
+      danhSachMuc.forEach(function (m) {
+        const the = document.createElement('div');
+        the.className = 'the-muc';
+        const laHam = (m.loai === 'ham' || m.loai === 'su_kien');
+        the.innerHTML =
+          '<span class="cot-ten">' +
+            '<span class="ten-vi">' + m.vi + (laHam ? '()' : '') + '</span>' +
+            '<span class="mui-ten">↔</span>' +
+            '<span class="ten-en">' + m.en + (laHam ? '()' : '') + '</span>' +
+          '</span>' +
+          '<span class="nhan-loai">' + m.loai + '</span>' +
+          '<span class="nhan-do-uu-tien nhan-' + m.do_uu_tien + '">' +
+            (m.do_uu_tien === 'co_ban' ? 'Cơ bản' : m.do_uu_tien === 'trung_cap' ? 'Trung cấp' : 'Nâng cao') +
+          '</span>' +
+          '<a class="lien-ket-them" target="_blank" rel="noopener" href="https://p5js.org/reference/p5/' + m.en + '/">Tài liệu gốc ↗</a>';
+        oDanhSach.appendChild(the);
+      });
+    });
+  }
+
+  document.getElementById('o-tim-kiem').addEventListener('input', veLaiDanhSach);
+  document.getElementById('loc-nhom').addEventListener('change', veLaiDanhSach);
+  document.getElementById('loc-do-uu-tien').addEventListener('change', veLaiDanhSach);
+</script>
+
+</body>
+</html>
