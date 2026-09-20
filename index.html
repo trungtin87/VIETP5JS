@@ -856,6 +856,18 @@ ${scriptNhipTim}
     dong.textContent = noiDung;
     o.appendChild(dong);
     o.scrollTop = o.scrollHeight;
+
+    // Loi thi PHAI hien ra ngay, khong duoc de nguoi dung tuong nhu
+    // nut/hanh dong khong hoat dong trong khi thuc ra co thong bao loi
+    // dang bi giau trong console dang thu gon.
+    if (muc === 'error') {
+      const vungConsole = document.getElementById('vung-console');
+      if (!vungConsole.classList.contains('mo')) {
+        vungConsole.classList.add('mo');
+        vungConsole.style.flexBasis = chieuCaoConsoleMoRong + 'px';
+        document.getElementById('mui-ten-console').textContent = '▾';
+      }
+    }
   }
   function xoaConsole() {
     nhatKyConsole = [];
