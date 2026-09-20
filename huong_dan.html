@@ -60,6 +60,24 @@
   .lien-ket-them { font-size:12.5px; white-space:nowrap; }
   #trang-thai-tai { text-align:center; padding:40px; color:#9aa4b2; }
   #khong-co-ket-qua { display:none; text-align:center; padding:40px; color:#9aa4b2; }
+
+  .nut-chi-tiet {
+    font-size:12px; background:#333; color:#ddd; border:none; padding:4px 10px;
+    border-radius:12px; cursor:pointer;
+  }
+  .nut-chi-tiet:hover { background:var(--mau-nhan); color:#fff; }
+  .khoi-chi-tiet {
+    display:none; width:100%; margin-top:8px; padding-top:10px; border-top:1px dashed #3a3a3a;
+    font-size:13.5px; line-height:1.6;
+  }
+  .khoi-chi-tiet.mo { display:block; }
+  .khoi-chi-tiet table { border-collapse:collapse; margin:8px 0; width:100%; }
+  .khoi-chi-tiet td { padding:4px 8px; border-bottom:1px solid #303030; vertical-align:top; }
+  .khoi-chi-tiet td:first-child { color:#7ee787; font-family:Consolas, monospace; white-space:nowrap; }
+  .khoi-chi-tiet pre {
+    background:#161616; padding:10px 12px; border-radius:6px; overflow-x:auto;
+    font-family:Consolas, monospace; font-size:12.5px; margin:8px 0 0;
+  }
 </style>
 </head>
 <body>
@@ -141,8 +159,14 @@
   };
 
   let duLieuGoc = [];
+  let taiLieuChiTiet = {};
 
-  fetch('./dic.json').then(r => r.json()).then(function (json) {
+  Promise.all([
+    fetch('./dic.json').then(r => r.json()),
+    fetch('./tai_lieu_vi.json').then(r => r.ok ? r.json() : {}).catch(() => ({}))
+  ]).then(function (ketQua) {
+    const json = ketQua[0];
+    taiLieuChiTiet = ketQua[1] || {};
     duLieuGoc = json.tu_dien.filter(m => m.vi); // chi lay 407 muc DA DICH
     document.getElementById('trang-thai-tai').remove();
 
@@ -198,6 +222,24 @@
         const the = document.createElement('div');
         the.className = 'the-muc';
         const laHam = (m.loai === 'ham' || m.loai === 'su_kien');
+        const chiTiet = taiLieuChiTiet[m.en];
+
+        let noiDungChiTiet = '';
+        if (chiTiet) {
+          let bangThamSo = '';
+          if (chiTiet.tham_so && chiTiet.tham_so.length) {
+            bangThamSo = '<table>' + chiTiet.tham_so.map(function (ts) {
+              return '<tr><td>' + ts.ten + '</td><td>' + ts.moTa + '</td></tr>';
+            }).join('') + '</table>';
+          }
+          const khoiViDu = chiTiet.vi_du ? '<pre>' + chiTiet.vi_du.replace(/</g, '&lt;') + '</pre>' : '';
+          noiDungChiTiet =
+            '<div class="khoi-chi-tiet">' +
+              '<p>' + chiTiet.mo_ta + '</p>' +
+              bangThamSo + khoiViDu +
+            '</div>';
+        }
+
         the.innerHTML =
           '<span class="cot-ten">' +
             '<span class="ten-vi">' + m.vi + (laHam ? '()' : '') + '</span>' +
@@ -208,7 +250,18 @@
           '<span class="nhan-do-uu-tien nhan-' + m.do_uu_tien + '">' +
             (m.do_uu_tien === 'co_ban' ? 'Cơ bản' : m.do_uu_tien === 'trung_cap' ? 'Trung cấp' : 'Nâng cao') +
           '</span>' +
-          '<a class="lien-ket-them" target="_blank" rel="noopener" href="https://p5js.org/reference/p5/' + m.en + '/">Tài liệu gốc ↗</a>';
+          (chiTiet ? '<button class="nut-chi-tiet">Xem chi tiết</button>' : '') +
+          '<a class="lien-ket-them" target="_blank" rel="noopener" href="https://p5js.org/reference/p5/' + m.en + '/">Tài liệu gốc ↗</a>' +
+          noiDungChiTiet;
+
+        if (chiTiet) {
+          the.querySelector('.nut-chi-tiet').addEventListener('click', function () {
+            const khoi = the.querySelector('.khoi-chi-tiet');
+            const dangMo = khoi.classList.toggle('mo');
+            this.textContent = dangMo ? 'Ẩn chi tiết' : 'Xem chi tiết';
+          });
+        }
+
         oDanhSach.appendChild(the);
       });
     });
